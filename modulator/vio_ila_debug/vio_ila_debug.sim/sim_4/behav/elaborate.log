@@ -1,0 +1,17 @@
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2016.4/bin/unwrapped/lnx64.o/xelab -wto 3cbfee302b5c4bb2a2459d7f71c23688 --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot pwm_tb_behav xil_defaultlib.pwm_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.frequency_trigger
+Compiling module xil_defaultlib.counter(cnt_value_p=8'b11111111,...
+Compiling module xil_defaultlib.sine(depth_p=8'b01000,width_p=8'...
+Compiling module xil_defaultlib.sine_top
+Compiling module xil_defaultlib.pwm
+Compiling module xil_defaultlib.pwm_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot pwm_tb_behav

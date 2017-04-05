@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Tue Apr  4 22:41:23 2017
+# Process ID: 12261
+# Current directory: /home/brian/0404/modulator/modulator.sim/sim_5/behav
+# Command line: wbtcv -mode batch -source /home/brian/0404/modulator/modulator.sim/sim_5/behav/xsim.dir/modulator_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/brian/0404/modulator/modulator.sim/sim_5/behav/webtalk.log
+# Journal file: /home/brian/0404/modulator/modulator.sim/sim_5/behav/webtalk.jou
+#-----------------------------------------------------------
+source /home/brian/0404/modulator/modulator.sim/sim_5/behav/xsim.dir/modulator_tb_behav/webtalk/xsim_webtalk.tcl -notrace

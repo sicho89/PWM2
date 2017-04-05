@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1491382426">
+  <File Type="PA-DCP" Name="modulator_vio.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="modulator_vio_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PA-TCL" Name="modulator_vio.tcl"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="modulator_vio_postplace_pwropt.dcp"/>
+  <File Type="INIT-TIMING" Name="modulator_vio_timing_summary_init.rpt"/>
+  <File Type="OPT-DCP" Name="modulator_vio_opt.dcp"/>
+  <File Type="OPT-DRC" Name="modulator_vio_drc_opted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="modulator_vio_methodology_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="modulator_vio.hwdef"/>
+  <File Type="OPT-TIMING" Name="modulator_vio_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="modulator_vio_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="modulator_vio_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="modulator_vio_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="modulator_vio_placed.dcp"/>
+  <File Type="PLACE-IO" Name="modulator_vio_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="modulator_vio_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="modulator_vio_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="modulator_vio_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="modulator_vio_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="modulator_vio_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="modulator_vio_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="modulator_vio_timing_summary_placed.rpt"/>
+  <File Type="RDI-RDI" Name="modulator_vio.vdi"/>
+  <File Type="PHYSOPT-DCP" Name="modulator_vio_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="modulator_vio_drc_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="modulator_vio_postroute_physopt.dcp"/>
+  <File Type="BG-BIT" Name="modulator_vio.bit"/>
+  <File Type="ROUTE-DCP" Name="modulator_vio_routed.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="modulator_vio_timing_summary_postroute_physopted.pb"/>
+  <File Type="BG-BIN" Name="modulator_vio.bin"/>
+  <File Type="ROUTE-TIMING-PB" Name="modulator_vio_timing_summary_routed.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="modulator_vio_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BITSTR-MSK" Name="modulator_vio.msk"/>
+  <File Type="ROUTE-TIMING-RPX" Name="modulator_vio_timing_summary_routed.rpx"/>
+  <File Type="BITSTR-RBT" Name="modulator_vio.rbt"/>
+  <File Type="ROUTE-SIMILARITY" Name="modulator_vio_incremental_reuse_routed.rpt"/>
+  <File Type="BITSTR-NKY" Name="modulator_vio.nky"/>
+  <File Type="ROUTE-CLK" Name="modulator_vio_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="modulator_vio_postroute_physopt_bb.dcp"/>
+  <File Type="BG-DRC" Name="modulator_vio.drc"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="modulator_vio_routed_bb.dcp"/>
+  <File Type="BITSTR-MMI" Name="modulator_vio.mmi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="modulator_vio_timing_summary_postroute_physopted.rpt"/>
+  <File Type="BG-BGN" Name="modulator_vio.bgn"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="modulator_vio_timing_summary_routed.rpt"/>
+  <File Type="BITSTR-SYSDEF" Name="modulator_vio.sysdef"/>
+  <File Type="BITSTR-BMM" Name="modulator_vio_bd.bmm"/>
+  <File Type="ROUTE-STATUS-PB" Name="modulator_vio_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="modulator_vio_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="modulator_vio_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="modulator_vio_power_summary_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="modulator_vio_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-PWR" Name="modulator_vio_power_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="modulator_vio_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="modulator_vio_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-PB" Name="modulator_vio_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="modulator_vio_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC" Name="modulator_vio_drc_routed.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="modulator_vio_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="modulator_vio_timing_summary_physopted.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../modulator_source_files/frequency_trigger_rtl.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../modulator_source_files/pwm_rtl.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../modulator_source_files/sine_rtl.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../modulator_source_files/counter.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../modulator_source_files/modulator_rtl.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../modulator_source_files/modulator_vio_rtl.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../modulator_source_files/sine_top_rtl.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Modulator Verilog files/Basic_FPGA_Tutorial_Vivado_Verilog_sources/sine_values.dat">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="modulator_vio"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/modulator_vio_rtl">
+    <File Path="$PSRCDIR/modulator_vio_rtl/new/modulator_vio.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../modulator.srcs/modulator_vio_rtl/new/modulator_vio.xdc"/>
+        <Attr Name="ImportTime" Val="1491382425"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/modulator_vio_rtl/new/modulator_vio.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="vio_core"/>
+</GenRun>

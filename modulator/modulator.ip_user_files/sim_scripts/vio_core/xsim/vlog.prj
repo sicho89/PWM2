@@ -1,0 +1,5 @@
+verilog xil_defaultlib "../../../../modulator.srcs/sources_1/ip/vio_core/sim/vio_core.v" --include "../../../../modulator.srcs/sources_1/ip/vio_core/hdl/verilog" --include "../../../../modulator.srcs/sources_1/ip/vio_core/hdl"
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

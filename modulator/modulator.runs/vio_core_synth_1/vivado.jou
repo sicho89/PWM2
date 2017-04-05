@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Wed Apr  5 16:39:42 2017
+# Process ID: 24473
+# Current directory: /home/brian/0404/modulator/modulator.runs/vio_core_synth_1
+# Command line: vivado -log vio_core.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vio_core.tcl
+# Log file: /home/brian/0404/modulator/modulator.runs/vio_core_synth_1/vio_core.vds
+# Journal file: /home/brian/0404/modulator/modulator.runs/vio_core_synth_1/vivado.jou
+#-----------------------------------------------------------
+source vio_core.tcl -notrace

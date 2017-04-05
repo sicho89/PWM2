@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:/home/brian/0404/modulator/modulator.srcs/modulator_vio_rtl/new/modulator_vio.xdc rfile:../../../modulator.srcs/modulator_vio_rtl/new/modulator_vio.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN T22 [get_ports pwm_out]
+set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN Y9 [get_ports clk_p]

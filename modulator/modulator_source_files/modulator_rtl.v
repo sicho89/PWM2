@@ -16,6 +16,10 @@ module modulator # (
  wire [width_p-1:0] sine_ampl_w;    // current amplitude value of the sine signal
  wire freq_trig_w;                  // signal which frequency depends on the sw0 state
  
+ // Adding debug nets
+ (* mark_debug *) wire sine_ampl_w;
+ (* mark_debug *) wire freq_trig_w;
+ 
  // Frequency Trigger module instance
  frequency_trigger freq_ce (clk_in, sw0, div_factor_freqhigh, div_factor_freqlow, freq_trig_w);
  

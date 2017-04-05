@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/modulator/modulator_source_files/sine_rtl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sine
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/modulator/modulator_source_files/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/modulator/modulator_source_files/frequency_trigger_rtl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frequency_trigger
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/modulator/modulator_source_files/pwm_rtl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/modulator/modulator_source_files/sine_top_rtl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sine_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/modulator/modulator_source_files/pwm_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/modulator/modulator.sim/sim_4/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

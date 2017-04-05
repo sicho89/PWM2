@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Tue Apr  4 21:47:25 2017
+# Process ID: 6910
+# Current directory: /home/brian/0404/modulator/modulator.sim/sim_4/behav
+# Command line: wbtcv -mode batch -source /home/brian/0404/modulator/modulator.sim/sim_4/behav/xsim.dir/pwm_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/brian/0404/modulator/modulator.sim/sim_4/behav/webtalk.log
+# Journal file: /home/brian/0404/modulator/modulator.sim/sim_4/behav/webtalk.jou
+#-----------------------------------------------------------
+source /home/brian/0404/modulator/modulator.sim/sim_4/behav/xsim.dir/pwm_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/brian/0404/modulator/modulator.sim/sim_4/behav/xsim.dir/pwm_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Apr  4 21:47:26 2017. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2016.4/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Apr  4 21:47:26 2017...

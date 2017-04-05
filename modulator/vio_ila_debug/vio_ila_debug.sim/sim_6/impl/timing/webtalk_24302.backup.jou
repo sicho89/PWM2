@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Wed Apr  5 14:19:48 2017
+# Process ID: 24302
+# Current directory: /home/brian/0404/modulator/modulator.sim/sim_6/impl/timing
+# Command line: wbtcv -mode batch -source /home/brian/0404/modulator/modulator.sim/sim_6/impl/timing/xsim.dir/modulator_wrapper_timesim_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/brian/0404/modulator/modulator.sim/sim_6/impl/timing/webtalk.log
+# Journal file: /home/brian/0404/modulator/modulator.sim/sim_6/impl/timing/webtalk.jou
+#-----------------------------------------------------------
+source /home/brian/0404/modulator/modulator.sim/sim_6/impl/timing/xsim.dir/modulator_wrapper_timesim_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace

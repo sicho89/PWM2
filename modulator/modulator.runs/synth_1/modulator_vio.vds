@@ -1,0 +1,371 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Wed Apr  5 17:36:47 2017
+# Process ID: 26730
+# Current directory: /home/brian/0404/modulator/modulator.runs/synth_1
+# Command line: vivado -log modulator_vio.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source modulator_vio.tcl
+# Log file: /home/brian/0404/modulator/modulator.runs/synth_1/modulator_vio.vds
+# Journal file: /home/brian/0404/modulator/modulator.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source modulator_vio.tcl -notrace
+Command: synth_design -top modulator_vio -part xc7z020clg484-1 -flatten_hierarchy none
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 26738 
+WARNING: [Synth 8-1082] sine_ampl_w was previously declared with a range [/home/brian/0404/modulator/modulator_source_files/modulator_rtl.v:20]
+WARNING: [Synth 8-976] sine_ampl_w has already been declared [/home/brian/0404/modulator/modulator_source_files/modulator_rtl.v:20]
+WARNING: [Synth 8-2654] second declaration of sine_ampl_w ignored [/home/brian/0404/modulator/modulator_source_files/modulator_rtl.v:20]
+INFO: [Synth 8-994] sine_ampl_w is declared here [/home/brian/0404/modulator/modulator_source_files/modulator_rtl.v:16]
+WARNING: [Synth 8-976] freq_trig_w has already been declared [/home/brian/0404/modulator/modulator_source_files/modulator_rtl.v:21]
+WARNING: [Synth 8-2654] second declaration of freq_trig_w ignored [/home/brian/0404/modulator/modulator_source_files/modulator_rtl.v:21]
+INFO: [Synth 8-994] freq_trig_w is declared here [/home/brian/0404/modulator/modulator_source_files/modulator_rtl.v:17]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1060.023 ; gain = 128.305 ; free physical = 2665 ; free virtual = 17247
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'modulator_vio' [/home/brian/0404/modulator/modulator_source_files/modulator_vio_rtl.v:5]
+	Parameter this_module_is_top_p bound to: 1'b1 
+	Parameter depth_p bound to: 8'b00001000 
+	Parameter width_p bound to: 8'b00001100 
+	Parameter cntampl_value_p bound to: 8'b11111111 
+	Parameter fclk_p bound to: 100000000.000000 - type: float 
+	Parameter f_low_p bound to: 1.000000 - type: float 
+	Parameter f_high_p bound to: 3.500000 - type: float 
+	Parameter c1_p bound to: 95.367432 - type: float 
+	Parameter c2_p bound to: 27 - type: integer 
+	Parameter div_factor_freqhigh_p bound to: 110592 - type: integer 
+	Parameter c3_p bound to: 95 - type: integer 
+	Parameter div_factor_freqlow_p bound to: 389120 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'modulator' [/home/brian/0404/modulator/modulator_source_files/modulator_rtl.v:3]
+	Parameter depth_p bound to: 8'b00001000 
+	Parameter width_p bound to: 8'b00001100 
+	Parameter cntampl_value_p bound to: 8'b11111111 
+INFO: [Synth 8-638] synthesizing module 'frequency_trigger' [/home/brian/0404/modulator/modulator_source_files/frequency_trigger_rtl.v:3]
+INFO: [Synth 8-256] done synthesizing module 'frequency_trigger' (1#1) [/home/brian/0404/modulator/modulator_source_files/frequency_trigger_rtl.v:3]
+INFO: [Synth 8-638] synthesizing module 'counter' [/home/brian/0404/modulator/modulator_source_files/counter.v:3]
+	Parameter cnt_value_p bound to: 8'b11111111 
+	Parameter depth_p bound to: 8'b00001000 
+INFO: [Synth 8-256] done synthesizing module 'counter' (2#1) [/home/brian/0404/modulator/modulator_source_files/counter.v:3]
+INFO: [Synth 8-638] synthesizing module 'sine' [/home/brian/0404/modulator/modulator_source_files/sine_rtl.v:3]
+	Parameter depth_p bound to: 8'b00001000 
+	Parameter width_p bound to: 8'b00001100 
+INFO: [Synth 8-3876] $readmem data file 'sine_values.dat' is read successfully [/home/brian/0404/modulator/modulator_source_files/sine_rtl.v:16]
+INFO: [Synth 8-256] done synthesizing module 'sine' (3#1) [/home/brian/0404/modulator/modulator_source_files/sine_rtl.v:3]
+INFO: [Synth 8-638] synthesizing module 'pwm' [/home/brian/0404/modulator/modulator_source_files/pwm_rtl.v:3]
+	Parameter width_p bound to: 8'b00001100 
+	Parameter load_new_ampl bound to: 3'b000 
+	Parameter pwm_high bound to: 3'b001 
+	Parameter pwm_low bound to: 3'b010 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/brian/0404/modulator/modulator_source_files/pwm_rtl.v:42]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/brian/0404/modulator/modulator_source_files/pwm_rtl.v:102]
+INFO: [Synth 8-256] done synthesizing module 'pwm' (4#1) [/home/brian/0404/modulator/modulator_source_files/pwm_rtl.v:3]
+INFO: [Synth 8-256] done synthesizing module 'modulator' (5#1) [/home/brian/0404/modulator/modulator_source_files/modulator_rtl.v:3]
+INFO: [Synth 8-638] synthesizing module 'vio_core' [/home/brian/0404/modulator/modulator.runs/synth_1/.Xil/Vivado-26730-brian-Linux-16-04/realtime/vio_core_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'vio_core' (6#1) [/home/brian/0404/modulator/modulator.runs/synth_1/.Xil/Vivado-26730-brian-Linux-16-04/realtime/vio_core_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'modulator_vio' (7#1) [/home/brian/0404/modulator/modulator_source_files/modulator_vio_rtl.v:5]
+WARNING: [Synth 8-3331] design modulator_vio has unconnected port clk_n
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1085.273 ; gain = 153.555 ; free physical = 2643 ; free virtual = 17221
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1085.273 ; gain = 153.555 ; free physical = 2643 ; free virtual = 17220
+---------------------------------------------------------------------------------
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'vio_core' instantiated as 'vio' [/home/brian/0404/modulator/modulator_source_files/modulator_vio_rtl.v:63]
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/brian/0404/modulator/modulator.runs/synth_1/.Xil/Vivado-26730-brian-Linux-16-04/dcp/vio_core_in_context.xdc] for cell 'vio'
+Finished Parsing XDC File [/home/brian/0404/modulator/modulator.runs/synth_1/.Xil/Vivado-26730-brian-Linux-16-04/dcp/vio_core_in_context.xdc] for cell 'vio'
+Parsing XDC File [/home/brian/0404/modulator/modulator.srcs/modulator_vio_rtl/new/modulator_vio.xdc]
+Finished Parsing XDC File [/home/brian/0404/modulator/modulator.srcs/modulator_vio_rtl/new/modulator_vio.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/brian/0404/modulator/modulator.srcs/modulator_vio_rtl/new/modulator_vio.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/modulator_vio_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/modulator_vio_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1443.328 ; gain = 0.000 ; free physical = 2429 ; free virtual = 17007
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1443.328 ; gain = 511.609 ; free physical = 2416 ; free virtual = 16999
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1443.328 ; gain = 511.609 ; free physical = 2416 ; free virtual = 16999
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1443.328 ; gain = 511.609 ; free physical = 2415 ; free virtual = 16999
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "threshold_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "count_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "state_r" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1443.328 ; gain = 511.609 ; free physical = 2399 ; free virtual = 16983
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---ROMs : 
+	                              ROMs := 1     
++---Muxes : 
+	   2 Input     13 Bit        Muxes := 1     
+	   4 Input     13 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   4 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module frequency_trigger 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module sine 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module pwm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 1     
++---Registers : 
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     13 Bit        Muxes := 1     
+	   4 Input     13 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design modulator_vio has unconnected port clk_n
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1443.328 ; gain = 511.609 ; free physical = 2394 ; free virtual = 16972
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+--------------+---------------+----------------+
+|Module Name | RTL Object   | Depth x Width | Implemented As | 
++------------+--------------+---------------+----------------+
+|sine        | sine_out_reg | 256x12        | Block RAM      | 
++------------+--------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1443.328 ; gain = 511.609 ; free physical = 2346 ; free virtual = 16947
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1443.328 ; gain = 511.609 ; free physical = 2332 ; free virtual = 16933
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance pwmmodulator/sine/sine_out_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1443.328 ; gain = 511.609 ; free physical = 2349 ; free virtual = 16950
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1443.328 ; gain = 511.609 ; free physical = 2353 ; free virtual = 16953
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1443.328 ; gain = 511.609 ; free physical = 2353 ; free virtual = 16953
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1443.328 ; gain = 511.609 ; free physical = 2353 ; free virtual = 16953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |vio_core      |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |vio_core |     1|
+|2     |BUFG     |     1|
+|3     |CARRY4   |    71|
+|4     |LUT1     |   204|
+|5     |LUT2     |     4|
+|6     |LUT3     |     8|
+|7     |LUT4     |   146|
+|8     |LUT5     |     2|
+|9     |LUT6     |    15|
+|10    |RAMB18E1 |     1|
+|11    |FDRE     |   110|
+|12    |IBUF     |     1|
+|13    |OBUF     |     1|
++------+---------+------+
+
+Report Instance Areas: 
++------+----------------+---------------------+------+
+|      |Instance        |Module               |Cells |
++------+----------------+---------------------+------+
+|1     |top             |                     |   565|
+|2     |  pwmmodulator  |modulator            |   561|
+|3     |    freq_ce     |frequency_trigger__1 |   224|
+|4     |    counterampl |counter              |    27|
+|5     |    sine        |sine                 |     1|
+|6     |    pwmmodule   |pwm                  |   309|
+|7     |      freq_ce   |frequency_trigger    |   224|
++------+----------------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1443.328 ; gain = 511.609 ; free physical = 2353 ; free virtual = 16953
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1443.328 ; gain = 73.465 ; free physical = 2353 ; free virtual = 16953
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1443.336 ; gain = 511.617 ; free physical = 2353 ; free virtual = 16953
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 73 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+41 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1443.336 ; gain = 444.113 ; free physical = 2370 ; free virtual = 16954
+INFO: [Common 17-1381] The checkpoint '/home/brian/0404/modulator/modulator.runs/synth_1/modulator_vio.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1467.340 ; gain = 0.000 ; free physical = 2369 ; free virtual = 16953
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  5 17:37:12 2017...
