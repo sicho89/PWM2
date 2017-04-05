@@ -1,0 +1,10 @@
+0.6
+2016.4
+Jan 23 2017
+19:19:20
+/home/brian/0404/modulator/modulator.sim/sim_3/behav/glbl.v,1485222234,verilog,,,,glbl,,,,,,,,
+/home/brian/0404/modulator/modulator_source_files/counter.v,1491275065,verilog,,,,counter,,,,,,,,
+/home/brian/0404/modulator/modulator_source_files/frequency_trigger_rtl.v,1491267889,verilog,,,,frequency_trigger,,,,,,,,
+/home/brian/0404/modulator/modulator_source_files/sine_rtl.v,1491276214,verilog,,,,sine,,,,,,,,
+/home/brian/0404/modulator/modulator_source_files/sine_top_rtl.v,1491281478,verilog,,,,sine_top,,,,,,,,
+/home/brian/0404/modulator/modulator_source_files/sine_top_tb.v,1491282081,verilog,,,,sine_top_tb,,,,,,,,

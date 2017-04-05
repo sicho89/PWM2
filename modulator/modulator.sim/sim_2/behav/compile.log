@@ -1,0 +1,7 @@
+awk: symbol lookup error: awk: undefined symbol: mpfr_z_sub
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/modulator/modulator_source_files/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/modulator/modulator_source_files/counter_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/modulator/modulator.sim/sim_2/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

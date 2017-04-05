@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../modulator_source_files/frequency_trigger_rtl.v"
+verilog xil_defaultlib  "../../../modulator_source_files/pwm_rtl.v"
+verilog xil_defaultlib  "../../../modulator_source_files/sine_rtl.v"
+verilog xil_defaultlib  "../../../modulator_source_files/counter.v"
+verilog xil_defaultlib  "../../../modulator_source_files/modulator_rtl.v"
+verilog xil_defaultlib  "../../../modulator_source_files/modulator_tb.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
