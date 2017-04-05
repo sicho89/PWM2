@@ -1,0 +1,6 @@
+0.6
+2016.4
+Jan 23 2017
+19:19:20
+/home/brian/0404/modulator/modulator.sim/sim_6/impl/timing/modulator_wrapper_timesim_tb_time_impl.v,1491369580,verilog,,,,counter;frequency_trigger;frequency_trigger_0;glbl;modulator;modulator_wrapper;pwm,,,,,,,,
+/home/brian/0404/modulator/modulator_source_files/modulator_wrapper_timesim_tb.v,1491369470,verilog,,,,modulator_wrapper_timesim_tb,,,,,,,,

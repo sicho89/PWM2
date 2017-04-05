@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (lin64) Build 1756540 Mon Jan 23 19:11:19 MST 2017
-| Date         : Tue Apr  4 23:51:14 2017
+| Date         : Wed Apr  5 13:23:51 2017
 | Host         : brian-Linux-16-04 running 64-bit Ubuntu 16.04.2 LTS
 | Command      : report_utilization -file modulator_wrapper_utilization_synth.rpt -pb modulator_wrapper_utilization_synth.pb
 | Design       : modulator_wrapper

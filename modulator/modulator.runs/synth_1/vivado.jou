@@ -2,11 +2,11 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Tue Apr  4 14:47:23 2017
-# Process ID: 28128
+# Start of session at: Wed Apr  5 13:23:28 2017
+# Process ID: 17362
 # Current directory: /home/brian/0404/modulator/modulator.runs/synth_1
-# Command line: vivado -log sine_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sine_top.tcl
-# Log file: /home/brian/0404/modulator/modulator.runs/synth_1/sine_top.vds
+# Command line: vivado -log modulator_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source modulator_wrapper.tcl
+# Log file: /home/brian/0404/modulator/modulator.runs/synth_1/modulator_wrapper.vds
 # Journal file: /home/brian/0404/modulator/modulator.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source sine_top.tcl -notrace
+source modulator_wrapper.tcl -notrace
