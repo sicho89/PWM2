@@ -1,27 +1,29 @@
 {
    guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port clk_in -pg 1 -y 20 -defaultsOSRD
-preplace port sw0 -pg 1 -y 40 -defaultsOSRD
-preplace port pwm_out -pg 1 -y 150 -defaultsOSRD
+preplace port clk_in -pg 1 -y 30 -defaultsOSRD
+preplace port pwm_out -pg 1 -y 40 -defaultsOSRD
+preplace inst vio_0 -pg 1 -lvl 1 -y 260 -defaultsOSRD
 preplace inst xlconstant_0 -pg 1 -lvl 1 -y 90 -defaultsOSRD
 preplace inst xlconstant_1 -pg 1 -lvl 1 -y 170 -defaultsOSRD
-preplace inst sine_0 -pg 1 -lvl 4 -y 80 -defaultsOSRD
-preplace inst xlconstant_2 -pg 1 -lvl 4 -y 170 -defaultsOSRD
-preplace inst xlconstant_3 -pg 1 -lvl 4 -y 250 -defaultsOSRD
-preplace inst pwm_0 -pg 1 -lvl 5 -y 150 -defaultsOSRD
-preplace inst counter_0 -pg 1 -lvl 3 -y 90 -defaultsOSRD
-preplace inst frequency_trigger_0 -pg 1 -lvl 2 -y 100 -defaultsOSRD
-preplace netloc xlconstant_1_dout 1 1 1 160J
-preplace netloc counter_0_cnt_out 1 3 1 N
+preplace inst sine_0 -pg 1 -lvl 4 -y 110 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 4 -y 220 -defaultsOSRD
+preplace inst system_ila -pg 1 -lvl 3 -y 230 -defaultsOSRD
+preplace inst xlconstant_3 -pg 1 -lvl 4 -y 300 -defaultsOSRD
+preplace inst system_ila1 -pg 1 -lvl 5 -y 70 -defaultsOSRD
+preplace inst pwm_0 -pg 1 -lvl 5 -y 200 -defaultsOSRD
+preplace inst counter_0 -pg 1 -lvl 3 -y 110 -defaultsOSRD
+preplace inst frequency_trigger_0 -pg 1 -lvl 2 -y 80 -defaultsOSRD
+preplace netloc xlconstant_1_dout 1 1 1 290J
+preplace netloc counter_0_cnt_out 1 3 1 820
 preplace netloc xlconstant_2_dout 1 4 1 NJ
-preplace netloc pwm_0_pwm_out 1 5 1 N
-preplace netloc sw0_1 1 0 5 NJ 40 170 10 NJ 10 NJ 10 910
-preplace netloc clk_in_1 1 0 5 NJ 20 160 20 450 20 650 20 900
-preplace netloc xlconstant_0_dout 1 1 1 160J
-preplace netloc sine_0_sine_out 1 4 1 890
-preplace netloc frequency_trigger_0_freq_trig 1 2 1 N
-preplace netloc xlconstant_3_dout 1 4 1 900J
-levelinfo -pg 1 0 90 310 550 770 1050 1210 -top 0 -bot 300
+preplace netloc pwm_0_pwm_out 1 0 6 20 40 280J 160 600J 10 NJ 10 NJ 10 1390
+preplace netloc sw0_1 1 1 4 310 350 NJ 350 NJ 350 1090J
+preplace netloc clk_in_1 1 0 5 10 30 300 170 610 170 830 170 1070
+preplace netloc xlconstant_0_dout 1 1 1 NJ
+preplace netloc sine_0_sine_out 1 4 1 1080
+preplace netloc frequency_trigger_0_freq_trig 1 2 1 590
+preplace netloc xlconstant_3_dout 1 4 1 1100J
+levelinfo -pg 1 -10 150 450 720 950 1250 1410 -top 0 -bot 360
 ",
 }

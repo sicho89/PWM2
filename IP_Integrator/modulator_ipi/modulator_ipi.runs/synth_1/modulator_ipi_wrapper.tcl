@@ -14,6 +14,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.cache/wt [current_project]
 set_property parent.project_path /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.xpr [current_project]
+set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
@@ -22,14 +23,22 @@ set_property ip_output_repo /home/brian/0404/IP_Integrator/modulator_ipi/modulat
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/hdl/modulator_ipi_wrapper.v
 add_files /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/modulator_ipi.bd
+set_property used_in_implementation false [get_files -all /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/ip/modulator_ipi_vio_0_0/modulator_ipi_vio_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/ip/modulator_ipi_vio_0_0/modulator_ipi_vio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/ip/modulator_ipi_system_ila_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/ip/modulator_ipi_system_ila_0/bd_0/ip/ip_0/bd_db1b_ila_lib_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/ip/modulator_ipi_system_ila_0/bd_0/bd_db1b_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/ip/modulator_ipi_system_ila1_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/ip/modulator_ipi_system_ila1_0/bd_0/ip/ip_0/bd_32d7_ila_lib_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/ip/modulator_ipi_system_ila1_0/bd_0/bd_32d7_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/modulator_ipi_ooc.xdc]
 set_property is_locked true [get_files /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/modulator_ipi.bd]
 
 foreach dcp [get_files -quiet -all *.dcp] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/constrs_1/imports/modulator_ipi_source_files/modulator_ipi_rtl.xdc
-set_property used_in_implementation false [get_files /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/constrs_1/imports/modulator_ipi_source_files/modulator_ipi_rtl.xdc]
+read_xdc /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/constrs_1/imports/modulator_ipi_source_files/modulator_ila_vio_rtl.xdc
+set_property used_in_implementation false [get_files /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/constrs_1/imports/modulator_ipi_source_files/modulator_ila_vio_rtl.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

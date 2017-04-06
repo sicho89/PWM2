@@ -1,0 +1,30 @@
+set_property PACKAGE_PIN Y9 [get_ports clk_in]
+set_property PACKAGE_PIN T22 [get_ports pwm_out]
+
+set_property IOSTANDARD LVCMOS33 [get_ports clk_in]
+set_property IOSTANDARD LVCMOS33 [get_ports pwm_out]
+
+create_clock -period 10.000 -name clk_in -waveform {0.000 5.000} [get_ports clk_in]
+
+create_debug_core u_ila_0 ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 2 [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_in_IBUF]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+set_property port_width 12 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {modulator_ipi_i/sine_0_sine_out[0]} {modulator_ipi_i/sine_0_sine_out[1]} {modulator_ipi_i/sine_0_sine_out[2]} {modulator_ipi_i/sine_0_sine_out[3]} {modulator_ipi_i/sine_0_sine_out[4]} {modulator_ipi_i/sine_0_sine_out[5]} {modulator_ipi_i/sine_0_sine_out[6]} {modulator_ipi_i/sine_0_sine_out[7]} {modulator_ipi_i/sine_0_sine_out[8]} {modulator_ipi_i/sine_0_sine_out[9]} {modulator_ipi_i/sine_0_sine_out[10]} {modulator_ipi_i/sine_0_sine_out[11]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list modulator_ipi_i/frequency_trigger_0_freq_trig]]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets clk_in_IBUF]

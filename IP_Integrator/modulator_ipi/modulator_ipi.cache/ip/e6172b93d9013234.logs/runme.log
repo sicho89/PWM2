@@ -1,0 +1,73 @@
+
+*** Running vivado
+    with args -log modulator_ipi_system_ila_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source modulator_ipi_system_ila_0.tcl
+
+awk: symbol lookup error: awk: undefined symbol: mpfr_z_sub
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source modulator_ipi_system_ila_0.tcl -notrace
+awk: symbol lookup error: awk: undefined symbol: mpfr_z_sub
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:28 . Memory (MB): peak = 1140.805 ; gain = 209.086 ; free physical = 126 ; free virtual = 13668
+INFO: [Synth 8-638] synthesizing module 'modulator_ipi_system_ila_0' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/ip/modulator_ipi_system_ila_0/synth/modulator_ipi_system_ila_0.v:203]
+INFO: [Synth 8-638] synthesizing module 'bd_db1b' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/ip/modulator_ipi_system_ila_0/bd_0/hdl/bd_db1b.v:13]
+INFO: [Synth 8-638] synthesizing module 'bd_db1b_ila_lib_0' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/ip/modulator_ipi_system_ila_0/bd_0/ip/ip_0/synth/bd_db1b_ila_lib_0.v:84]
+INFO: [Synth 8-638] synthesizing module 'CFGLUT5' [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:998]
+INFO: [Synth 8-256] done synthesizing module 'CFGLUT5' (8#1) [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:998]
+INFO: [Synth 8-638] synthesizing module 'CARRY4' [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:961]
+INFO: [Synth 8-256] done synthesizing module 'CARRY4' (9#1) [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:961]
+INFO: [Synth 8-638] synthesizing module 'SRLC32E' [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:43478]
+INFO: [Synth 8-256] done synthesizing module 'SRLC32E' (19#1) [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:43478]
+INFO: [Synth 8-638] synthesizing module 'SRL16E' [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:43328]
+INFO: [Synth 8-256] done synthesizing module 'SRL16E' (21#1) [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:43328]
+INFO: [Synth 8-638] synthesizing module 'SRLC16E' [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:43417]
+INFO: [Synth 8-256] done synthesizing module 'SRLC16E' (23#1) [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:43417]
+INFO: [Synth 8-638] synthesizing module 'FDRE' [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:3964]
+INFO: [Synth 8-256] done synthesizing module 'FDRE' (28#1) [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:3964]
+INFO: [Synth 8-256] done synthesizing module 'bd_db1b_ila_lib_0' (46#1) [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/ip/modulator_ipi_system_ila_0/bd_0/ip/ip_0/synth/bd_db1b_ila_lib_0.v:84]
+INFO: [Synth 8-256] done synthesizing module 'bd_db1b' (47#1) [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/ip/modulator_ipi_system_ila_0/bd_0/hdl/bd_db1b.v:13]
+INFO: [Synth 8-256] done synthesizing module 'modulator_ipi_system_ila_0' (48#1) [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/ip/modulator_ipi_system_ila_0/synth/modulator_ipi_system_ila_0.v:203]
+Finished RTL Elaboration : Time (s): cpu = 00:00:54 ; elapsed = 00:01:22 . Memory (MB): peak = 1440.922 ; gain = 509.203 ; free physical = 130 ; free virtual = 12991
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:54 ; elapsed = 00:01:24 . Memory (MB): peak = 1440.922 ; gain = 509.203 ; free physical = 133 ; free virtual = 13008
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.18 . Memory (MB): peak = 1556.742 ; gain = 0.000 ; free physical = 120 ; free virtual = 12952
+Finished Constraint Validation : Time (s): cpu = 00:01:04 ; elapsed = 00:01:54 . Memory (MB): peak = 1556.742 ; gain = 625.023 ; free physical = 144 ; free virtual = 12958
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:04 ; elapsed = 00:01:54 . Memory (MB): peak = 1556.742 ; gain = 625.023 ; free physical = 145 ; free virtual = 12960
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:04 ; elapsed = 00:01:55 . Memory (MB): peak = 1556.742 ; gain = 625.023 ; free physical = 147 ; free virtual = 12962
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:06 ; elapsed = 00:01:58 . Memory (MB): peak = 1556.742 ; gain = 625.023 ; free physical = 133 ; free virtual = 12951
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:10 ; elapsed = 00:02:04 . Memory (MB): peak = 1556.742 ; gain = 625.023 ; free physical = 141 ; free virtual = 12892
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:18 ; elapsed = 00:02:11 . Memory (MB): peak = 1556.742 ; gain = 625.023 ; free physical = 127 ; free virtual = 12886
+Finished Timing Optimization : Time (s): cpu = 00:01:18 ; elapsed = 00:02:12 . Memory (MB): peak = 1556.742 ; gain = 625.023 ; free physical = 126 ; free virtual = 12885
+Finished Technology Mapping : Time (s): cpu = 00:01:18 ; elapsed = 00:02:13 . Memory (MB): peak = 1556.742 ; gain = 625.023 ; free physical = 129 ; free virtual = 12858
+Finished IO Insertion : Time (s): cpu = 00:01:19 ; elapsed = 00:02:13 . Memory (MB): peak = 1556.742 ; gain = 625.023 ; free physical = 129 ; free virtual = 12858
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:19 ; elapsed = 00:02:13 . Memory (MB): peak = 1556.742 ; gain = 625.023 ; free physical = 129 ; free virtual = 12858
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:19 ; elapsed = 00:02:13 . Memory (MB): peak = 1556.742 ; gain = 625.023 ; free physical = 129 ; free virtual = 12858
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:19 ; elapsed = 00:02:13 . Memory (MB): peak = 1556.742 ; gain = 625.023 ; free physical = 129 ; free virtual = 12858
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:19 ; elapsed = 00:02:13 . Memory (MB): peak = 1556.742 ; gain = 625.023 ; free physical = 129 ; free virtual = 12858
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:19 ; elapsed = 00:02:13 . Memory (MB): peak = 1556.742 ; gain = 625.023 ; free physical = 129 ; free virtual = 12858
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    13|
+|2     |CFGLUT5  |    37|
+|3     |LUT1     |    10|
+|4     |LUT2     |    42|
+|5     |LUT3     |    67|
+|6     |LUT4     |    75|
+|7     |LUT5     |    87|
+|8     |LUT6     |   249|
+|9     |MUXF7    |     3|
+|10    |RAMB18E1 |     1|
+|11    |SRL16E   |     6|
+|12    |SRLC16E  |     2|
+|13    |SRLC32E  |    17|
+|14    |FDRE     |   782|
+|15    |FDSE     |     9|
++------+---------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:19 ; elapsed = 00:02:13 . Memory (MB): peak = 1556.742 ; gain = 625.023 ; free physical = 129 ; free virtual = 12858
+synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:58 . Memory (MB): peak = 1556.750 ; gain = 511.527 ; free physical = 125 ; free virtual = 12873

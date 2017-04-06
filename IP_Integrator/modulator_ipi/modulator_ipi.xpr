@@ -37,13 +37,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="0"/>
-    <Option Name="WTModelSimExportSim" Val="0"/>
-    <Option Name="WTQuestaExportSim" Val="0"/>
-    <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="0"/>
-    <Option Name="WTRivieraExportSim" Val="0"/>
-    <Option Name="WTActivehdlExportSim" Val="0"/>
+    <Option Name="WTXSimExportSim" Val="2"/>
+    <Option Name="WTModelSimExportSim" Val="2"/>
+    <Option Name="WTQuestaExportSim" Val="2"/>
+    <Option Name="WTIesExportSim" Val="2"/>
+    <Option Name="WTVcsExportSim" Val="2"/>
+    <Option Name="WTRivieraExportSim" Val="2"/>
+    <Option Name="WTActivehdlExportSim" Val="2"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -77,17 +77,26 @@
         <CompFileExtendedInfo CompFileName="modulator_ipi.bd" FileRelPathName="ip/modulator_ipi_xlconstant_3_0/modulator_ipi_xlconstant_3_0.xci">
           <Proxy FileSetName="modulator_ipi_xlconstant_3_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="modulator_ipi.bd" FileRelPathName="ip/modulator_ipi_vio_0_0/modulator_ipi_vio_0_0.xci">
+          <Proxy FileSetName="modulator_ipi_vio_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="modulator_ipi.bd" FileRelPathName="ip/modulator_ipi_pwm_0_0/modulator_ipi_pwm_0_0.xci">
           <Proxy FileSetName="modulator_ipi_pwm_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="modulator_ipi.bd" FileRelPathName="ip/modulator_ipi_counter_0_0/modulator_ipi_counter_0_0.xci">
           <Proxy FileSetName="modulator_ipi_counter_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="modulator_ipi.bd" FileRelPathName="ip/modulator_ipi_system_ila1_0/modulator_ipi_system_ila1_0.xci">
+          <Proxy FileSetName="modulator_ipi_system_ila1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="modulator_ipi.bd" FileRelPathName="ip/modulator_ipi_system_ila_0/modulator_ipi_system_ila_0.xci">
+          <Proxy FileSetName="modulator_ipi_system_ila_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="modulator_ipi.bd" FileRelPathName="hdl/modulator_ipi.v"/>
+        <CompFileExtendedInfo CompFileName="modulator_ipi.bd" FileRelPathName="modulator_ipi_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="modulator_ipi.bd" FileRelPathName="hdl/modulator_ipi.hwdef"/>
         <CompFileExtendedInfo CompFileName="modulator_ipi.bd" FileRelPathName="hw_handoff/modulator_ipi_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="modulator_ipi.bd" FileRelPathName="hw_handoff/modulator_ipi.hwh"/>
-        <CompFileExtendedInfo CompFileName="modulator_ipi.bd" FileRelPathName="hdl/modulator_ipi.hwdef"/>
-        <CompFileExtendedInfo CompFileName="modulator_ipi.bd" FileRelPathName="modulator_ipi_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="modulator_ipi.bd" FileRelPathName="hdl/modulator_ipi.v"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/modulator_ipi/hdl/modulator_ipi_wrapper.v">
         <FileInfo>
@@ -104,15 +113,16 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PSRCDIR/constrs_1/imports/modulator_ipi_source_files/modulator_ipi_rtl.xdc">
+      <File Path="$PSRCDIR/constrs_1/imports/modulator_ipi_source_files/modulator_ila_vio_rtl.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/modulator_ipi_source_files/modulator_ipi_rtl.xdc"/>
-          <Attr Name="ImportTime" Val="1491457189"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/modulator_ipi_source_files/modulator_ila_vio_rtl.xdc"/>
+          <Attr Name="ImportTime" Val="1491463045"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
       <Config>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/modulator_ipi_source_files/modulator_ila_vio_rtl.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
@@ -172,6 +182,24 @@
     <FileSet Name="modulator_ipi_counter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/modulator_ipi_counter_0_0">
       <Config>
         <Option Name="TopModule" Val="modulator_ipi_counter_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="modulator_ipi_vio_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/modulator_ipi_vio_0_0">
+      <Config>
+        <Option Name="TopModule" Val="modulator_ipi_vio_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="modulator_ipi_system_ila_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/modulator_ipi_system_ila_0">
+      <Config>
+        <Option Name="TopModule" Val="modulator_ipi_system_ila_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="modulator_ipi_system_ila1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/modulator_ipi_system_ila1_0">
+      <Config>
+        <Option Name="TopModule" Val="modulator_ipi_system_ila1_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -279,6 +307,36 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="modulator_ipi_counter_0_0_synth_1" Type="Ft3:Synth" SrcSet="modulator_ipi_counter_0_0" Part="xc7z020clg484-1" ConstrsSet="modulator_ipi_counter_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/modulator_ipi_counter_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="modulator_ipi_vio_0_0_synth_1" Type="Ft3:Synth" SrcSet="modulator_ipi_vio_0_0" Part="xc7z020clg484-1" ConstrsSet="modulator_ipi_vio_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/modulator_ipi_vio_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="modulator_ipi_system_ila_0_synth_1" Type="Ft3:Synth" SrcSet="modulator_ipi_system_ila_0" Part="xc7z020clg484-1" ConstrsSet="modulator_ipi_system_ila_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/modulator_ipi_system_ila_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="modulator_ipi_system_ila1_0_synth_1" Type="Ft3:Synth" SrcSet="modulator_ipi_system_ila1_0" Part="xc7z020clg484-1" ConstrsSet="modulator_ipi_system_ila1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/modulator_ipi_system_ila1_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -426,6 +484,57 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="modulator_ipi_counter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="modulator_ipi_counter_0_0" Description="Default settings for Implementation." SynthRun="modulator_ipi_counter_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="modulator_ipi_vio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="modulator_ipi_vio_0_0" Description="Default settings for Implementation." SynthRun="modulator_ipi_vio_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="modulator_ipi_system_ila_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="modulator_ipi_system_ila_0" Description="Default settings for Implementation." SynthRun="modulator_ipi_system_ila_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="modulator_ipi_system_ila1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="modulator_ipi_system_ila1_0" Description="Default settings for Implementation." SynthRun="modulator_ipi_system_ila1_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
           <Desc>Default settings for Implementation.</Desc>

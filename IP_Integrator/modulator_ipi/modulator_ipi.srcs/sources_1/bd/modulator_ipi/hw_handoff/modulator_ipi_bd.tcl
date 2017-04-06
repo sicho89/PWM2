@@ -158,7 +158,6 @@ proc create_root_design { parentCell } {
   # Create ports
   set clk_in [ create_bd_port -dir I clk_in ]
   set pwm_out [ create_bd_port -dir O pwm_out ]
-  set sw0 [ create_bd_port -dir I sw0 ]
 
   # Create instance: counter_0, and set properties
   set counter_0 [ create_bd_cell -type ip -vlnv VSI-Logic:modulator:counter:1.0 counter_0 ]
@@ -182,6 +181,25 @@ CONFIG.width_p {0x00C} \
 CONFIG.depth_p {0x008} \
 CONFIG.width_p {0x00C} \
  ] $sine_0
+
+  # Create instance: system_ila, and set properties
+  set system_ila [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.0 system_ila ]
+  set_property -dict [ list \
+CONFIG.C_MON_TYPE {NATIVE} \
+CONFIG.C_NUM_OF_PROBES {1} \
+CONFIG.C_PROBE0_TYPE {0} \
+ ] $system_ila
+
+  # Create instance: system_ila1, and set properties
+  set system_ila1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.0 system_ila1 ]
+  set_property -dict [ list \
+CONFIG.C_MON_TYPE {NATIVE} \
+CONFIG.C_NUM_OF_PROBES {1} \
+CONFIG.C_PROBE0_TYPE {0} \
+ ] $system_ila1
+
+  # Create instance: vio_0, and set properties
+  set vio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:vio:3.0 vio_0 ]
 
   # Create instance: xlconstant_0, and set properties
   set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
@@ -212,12 +230,18 @@ CONFIG.CONST_WIDTH {32} \
  ] $xlconstant_3
 
   # Create port connections
-  connect_bd_net -net clk_in_1 [get_bd_ports clk_in] [get_bd_pins counter_0/clk_in] [get_bd_pins frequency_trigger_0/clk_in] [get_bd_pins pwm_0/clk_in] [get_bd_pins sine_0/clk_in]
+  connect_bd_net -net clk_in_1 [get_bd_ports clk_in] [get_bd_pins counter_0/clk_in] [get_bd_pins frequency_trigger_0/clk_in] [get_bd_pins pwm_0/clk_in] [get_bd_pins sine_0/clk_in] [get_bd_pins system_ila/clk] [get_bd_pins system_ila1/clk] [get_bd_pins vio_0/clk]
   connect_bd_net -net counter_0_cnt_out [get_bd_pins counter_0/cnt_out] [get_bd_pins sine_0/ampl_cnt]
-  connect_bd_net -net frequency_trigger_0_freq_trig [get_bd_pins counter_0/cnt_en] [get_bd_pins frequency_trigger_0/freq_trig]
-  connect_bd_net -net pwm_0_pwm_out [get_bd_ports pwm_out] [get_bd_pins pwm_0/pwm_out]
-  connect_bd_net -net sine_0_sine_out [get_bd_pins pwm_0/sine_ampl] [get_bd_pins sine_0/sine_out]
-  connect_bd_net -net sw0_1 [get_bd_ports sw0] [get_bd_pins frequency_trigger_0/sw0] [get_bd_pins pwm_0/sw0]
+  connect_bd_net -net frequency_trigger_0_freq_trig [get_bd_pins counter_0/cnt_en] [get_bd_pins frequency_trigger_0/freq_trig] [get_bd_pins system_ila/probe0]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_nets frequency_trigger_0_freq_trig]
+  connect_bd_net -net pwm_0_pwm_out [get_bd_ports pwm_out] [get_bd_pins pwm_0/pwm_out] [get_bd_pins vio_0/probe_in0]
+  connect_bd_net -net sine_0_sine_out [get_bd_pins pwm_0/sine_ampl] [get_bd_pins sine_0/sine_out] [get_bd_pins system_ila1/probe0]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_nets sine_0_sine_out]
+  connect_bd_net -net sw0_1 [get_bd_pins frequency_trigger_0/sw0] [get_bd_pins pwm_0/sw0] [get_bd_pins vio_0/probe_out0]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins frequency_trigger_0/div_factor_freqhigh] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins frequency_trigger_0/div_factor_freqlow] [get_bd_pins xlconstant_1/dout]
   connect_bd_net -net xlconstant_2_dout [get_bd_pins pwm_0/div_factor_freqhigh] [get_bd_pins xlconstant_2/dout]

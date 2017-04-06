@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1491457233">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1491463799">
   <File Type="VDS-TIMING-PB" Name="modulator_ipi_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="modulator_ipi_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="modulator_ipi_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="modulator_ipi_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="modulator_ipi_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="modulator_ipi_wrapper_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="modulator_ipi_wrapper.vds"/>
   <File Type="PA-TCL" Name="modulator_ipi_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="modulator_ipi_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="modulator_ipi_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="modulator_ipi_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="modulator_ipi_wrapper.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/modulator_ipi/modulator_ipi.bd">
@@ -32,15 +32,16 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/imports/modulator_ipi_source_files/modulator_ipi_rtl.xdc">
+    <File Path="$PSRCDIR/constrs_1/imports/modulator_ipi_source_files/modulator_ila_vio_rtl.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/modulator_ipi_source_files/modulator_ipi_rtl.xdc"/>
-        <Attr Name="ImportTime" Val="1491457189"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/modulator_ipi_source_files/modulator_ila_vio_rtl.xdc"/>
+        <Attr Name="ImportTime" Val="1491463045"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/modulator_ipi_source_files/modulator_ila_vio_rtl.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -50,12 +51,15 @@
     </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="modulator_ipi_system_ila1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="modulator_ipi_system_ila_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="modulator_ipi_vio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="modulator_ipi_counter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="modulator_ipi_pwm_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="modulator_ipi_xlconstant_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="modulator_ipi_xlconstant_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="modulator_ipi_xlconstant_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="modulator_ipi_sine_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="modulator_ipi_frequency_trigger_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="modulator_ipi_xlconstant_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="modulator_ipi_xlconstant_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="modulator_ipi_frequency_trigger_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="modulator_ipi_sine_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="modulator_ipi_xlconstant_0_0"/>
 </GenRun>

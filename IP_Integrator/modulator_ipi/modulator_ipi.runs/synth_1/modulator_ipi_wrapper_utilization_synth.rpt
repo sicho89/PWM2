@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (lin64) Build 1756540 Mon Jan 23 19:11:19 MST 2017
-| Date         : Thu Apr  6 14:44:00 2017
+| Date         : Thu Apr  6 16:19:32 2017
 | Host         : brian-Linux-16-04 running 64-bit Ubuntu 16.04.2 LTS
 | Command      : report_utilization -file modulator_ipi_wrapper_utilization_synth.rpt -pb modulator_ipi_wrapper_utilization_synth.pb
 | Design       : modulator_ipi_wrapper
@@ -109,7 +109,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    3 |     0 |       200 |  1.50 |
+| Bonded IOB                  |    2 |     0 |       200 |  1.00 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -165,8 +165,8 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| IBUF     |    2 |                  IO |
 | OBUF     |    1 |                  IO |
+| IBUF     |    1 |                  IO |
 +----------+------+---------------------+
 
 
@@ -180,6 +180,9 @@ Table of Contents
 | modulator_ipi_xlconstant_2_0        |    1 |
 | modulator_ipi_xlconstant_1_0        |    1 |
 | modulator_ipi_xlconstant_0_0        |    1 |
+| modulator_ipi_vio_0_0               |    1 |
+| modulator_ipi_system_ila_0          |    1 |
+| modulator_ipi_system_ila1_0         |    1 |
 | modulator_ipi_sine_0_0              |    1 |
 | modulator_ipi_pwm_0_0               |    1 |
 | modulator_ipi_frequency_trigger_0_0 |    1 |
