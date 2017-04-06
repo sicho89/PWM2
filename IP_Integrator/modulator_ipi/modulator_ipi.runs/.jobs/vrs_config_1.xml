@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="modulator_ipi_xlconstant_0_0_synth_1" LaunchDir="/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/modulator_ipi_xlconstant_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="modulator_ipi_sine_0_0_synth_1" LaunchDir="/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/modulator_ipi_sine_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="modulator_ipi_xlconstant_2_0_synth_1" LaunchDir="/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/modulator_ipi_xlconstant_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="modulator_ipi_xlconstant_1_0_synth_1" LaunchDir="/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/modulator_ipi_xlconstant_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="modulator_ipi_frequency_trigger_0_0_synth_1" LaunchDir="/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/modulator_ipi_frequency_trigger_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="modulator_ipi_xlconstant_3_0_synth_1" LaunchDir="/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/modulator_ipi_xlconstant_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="modulator_ipi_pwm_0_0_synth_1" LaunchDir="/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/modulator_ipi_pwm_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="modulator_ipi_counter_0_0_synth_1" LaunchDir="/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/modulator_ipi_counter_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="modulator_ipi_xlconstant_0_0_synth_1"/>
+		<Parent Id="modulator_ipi_sine_0_0_synth_1"/>
+		<Parent Id="modulator_ipi_xlconstant_2_0_synth_1"/>
+		<Parent Id="modulator_ipi_xlconstant_1_0_synth_1"/>
+		<Parent Id="modulator_ipi_frequency_trigger_0_0_synth_1"/>
+		<Parent Id="modulator_ipi_xlconstant_3_0_synth_1"/>
+		<Parent Id="modulator_ipi_pwm_0_0_synth_1"/>
+		<Parent Id="modulator_ipi_counter_0_0_synth_1"/>
+	</Run>
+</Runs>
+

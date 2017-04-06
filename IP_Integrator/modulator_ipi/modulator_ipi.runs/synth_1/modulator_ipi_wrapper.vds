@@ -1,0 +1,320 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Thu Apr  6 14:43:32 2017
+# Process ID: 19151
+# Current directory: /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1
+# Command line: vivado -log modulator_ipi_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source modulator_ipi_wrapper.tcl
+# Log file: /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/modulator_ipi_wrapper.vds
+# Journal file: /home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source modulator_ipi_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/brian/0404/IP_Package/ip_repository'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2016.4/data/ip'.
+Command: synth_design -top modulator_ipi_wrapper -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 19169 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1059.801 ; gain = 128.086 ; free physical = 1476 ; free virtual = 17205
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'modulator_ipi_wrapper' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/hdl/modulator_ipi_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'modulator_ipi' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/hdl/modulator_ipi.v:13]
+INFO: [Synth 8-638] synthesizing module 'modulator_ipi_counter_0_0' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/realtime/modulator_ipi_counter_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'modulator_ipi_counter_0_0' (1#1) [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/realtime/modulator_ipi_counter_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'modulator_ipi_frequency_trigger_0_0' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/realtime/modulator_ipi_frequency_trigger_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'modulator_ipi_frequency_trigger_0_0' (2#1) [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/realtime/modulator_ipi_frequency_trigger_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'modulator_ipi_pwm_0_0' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/realtime/modulator_ipi_pwm_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'modulator_ipi_pwm_0_0' (3#1) [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/realtime/modulator_ipi_pwm_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'modulator_ipi_sine_0_0' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/realtime/modulator_ipi_sine_0_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'modulator_ipi_sine_0_0' (4#1) [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/realtime/modulator_ipi_sine_0_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'modulator_ipi_xlconstant_0_0' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/realtime/modulator_ipi_xlconstant_0_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'modulator_ipi_xlconstant_0_0' (5#1) [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/realtime/modulator_ipi_xlconstant_0_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'modulator_ipi_xlconstant_1_0' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/realtime/modulator_ipi_xlconstant_1_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'modulator_ipi_xlconstant_1_0' (6#1) [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/realtime/modulator_ipi_xlconstant_1_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'modulator_ipi_xlconstant_2_0' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/realtime/modulator_ipi_xlconstant_2_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'modulator_ipi_xlconstant_2_0' (7#1) [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/realtime/modulator_ipi_xlconstant_2_0_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'modulator_ipi_xlconstant_3_0' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/realtime/modulator_ipi_xlconstant_3_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'modulator_ipi_xlconstant_3_0' (8#1) [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/realtime/modulator_ipi_xlconstant_3_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'modulator_ipi' (9#1) [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/hdl/modulator_ipi.v:13]
+INFO: [Synth 8-256] done synthesizing module 'modulator_ipi_wrapper' (10#1) [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/hdl/modulator_ipi_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1100.270 ; gain = 168.555 ; free physical = 1438 ; free virtual = 17162
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1100.270 ; gain = 168.555 ; free physical = 1438 ; free virtual = 17162
+---------------------------------------------------------------------------------
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'modulator_ipi_counter_0_0' instantiated as 'modulator_ipi_i/counter_0' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/hdl/modulator_ipi.v:35]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'modulator_ipi_frequency_trigger_0_0' instantiated as 'modulator_ipi_i/frequency_trigger_0' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/hdl/modulator_ipi.v:39]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'modulator_ipi_pwm_0_0' instantiated as 'modulator_ipi_i/pwm_0' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/hdl/modulator_ipi.v:45]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'modulator_ipi_sine_0_0' instantiated as 'modulator_ipi_i/sine_0' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/hdl/modulator_ipi.v:52]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'modulator_ipi_xlconstant_0_0' instantiated as 'modulator_ipi_i/xlconstant_0' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/hdl/modulator_ipi.v:56]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'modulator_ipi_xlconstant_1_0' instantiated as 'modulator_ipi_i/xlconstant_1' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/hdl/modulator_ipi.v:58]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'modulator_ipi_xlconstant_2_0' instantiated as 'modulator_ipi_i/xlconstant_2' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/hdl/modulator_ipi.v:60]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'modulator_ipi_xlconstant_3_0' instantiated as 'modulator_ipi_i/xlconstant_3' [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/sources_1/bd/modulator_ipi/hdl/modulator_ipi.v:62]
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/dcp/modulator_ipi_frequency_trigger_0_0_in_context.xdc] for cell 'modulator_ipi_i/frequency_trigger_0'
+Finished Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/dcp/modulator_ipi_frequency_trigger_0_0_in_context.xdc] for cell 'modulator_ipi_i/frequency_trigger_0'
+Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/dcp_2/modulator_ipi_counter_0_0_in_context.xdc] for cell 'modulator_ipi_i/counter_0'
+Finished Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/dcp_2/modulator_ipi_counter_0_0_in_context.xdc] for cell 'modulator_ipi_i/counter_0'
+Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/dcp_3/modulator_ipi_sine_0_0_in_context.xdc] for cell 'modulator_ipi_i/sine_0'
+Finished Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/dcp_3/modulator_ipi_sine_0_0_in_context.xdc] for cell 'modulator_ipi_i/sine_0'
+Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/dcp_4/modulator_ipi_pwm_0_0_in_context.xdc] for cell 'modulator_ipi_i/pwm_0'
+Finished Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/dcp_4/modulator_ipi_pwm_0_0_in_context.xdc] for cell 'modulator_ipi_i/pwm_0'
+Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/dcp_5/modulator_ipi_xlconstant_0_0_in_context.xdc] for cell 'modulator_ipi_i/xlconstant_0'
+Finished Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/dcp_5/modulator_ipi_xlconstant_0_0_in_context.xdc] for cell 'modulator_ipi_i/xlconstant_0'
+Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/dcp_6/modulator_ipi_xlconstant_1_0_in_context.xdc] for cell 'modulator_ipi_i/xlconstant_1'
+Finished Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/dcp_6/modulator_ipi_xlconstant_1_0_in_context.xdc] for cell 'modulator_ipi_i/xlconstant_1'
+Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/dcp_7/modulator_ipi_xlconstant_2_0_in_context.xdc] for cell 'modulator_ipi_i/xlconstant_2'
+Finished Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/dcp_7/modulator_ipi_xlconstant_2_0_in_context.xdc] for cell 'modulator_ipi_i/xlconstant_2'
+Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/dcp_8/modulator_ipi_xlconstant_3_0_in_context.xdc] for cell 'modulator_ipi_i/xlconstant_3'
+Finished Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/.Xil/Vivado-19151-brian-Linux-16-04/dcp_8/modulator_ipi_xlconstant_3_0_in_context.xdc] for cell 'modulator_ipi_i/xlconstant_3'
+Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/constrs_1/imports/modulator_ipi_source_files/modulator_ipi_rtl.xdc]
+Finished Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/constrs_1/imports/modulator_ipi_source_files/modulator_ipi_rtl.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.srcs/constrs_1/imports/modulator_ipi_source_files/modulator_ipi_rtl.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/modulator_ipi_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/modulator_ipi_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1390.324 ; gain = 0.000 ; free physical = 1259 ; free virtual = 16978
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1390.324 ; gain = 458.609 ; free physical = 1257 ; free virtual = 16977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1390.324 ; gain = 458.609 ; free physical = 1257 ; free virtual = 16977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for modulator_ipi_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for modulator_ipi_i/counter_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for modulator_ipi_i/frequency_trigger_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for modulator_ipi_i/pwm_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for modulator_ipi_i/sine_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for modulator_ipi_i/xlconstant_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for modulator_ipi_i/xlconstant_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for modulator_ipi_i/xlconstant_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for modulator_ipi_i/xlconstant_3. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1390.324 ; gain = 458.609 ; free physical = 1257 ; free virtual = 16977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1390.324 ; gain = 458.609 ; free physical = 1257 ; free virtual = 16977
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1390.324 ; gain = 458.609 ; free physical = 1241 ; free virtual = 16961
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1405.324 ; gain = 473.609 ; free physical = 1196 ; free virtual = 16923
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1405.324 ; gain = 473.609 ; free physical = 1196 ; free virtual = 16923
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1415.340 ; gain = 483.625 ; free physical = 1187 ; free virtual = 16914
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1415.340 ; gain = 483.625 ; free physical = 1187 ; free virtual = 16914
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1415.340 ; gain = 483.625 ; free physical = 1187 ; free virtual = 16914
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1415.340 ; gain = 483.625 ; free physical = 1187 ; free virtual = 16914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1415.340 ; gain = 483.625 ; free physical = 1187 ; free virtual = 16914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1415.340 ; gain = 483.625 ; free physical = 1187 ; free virtual = 16914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1415.340 ; gain = 483.625 ; free physical = 1187 ; free virtual = 16914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------------+----------+
+|      |BlackBox name                       |Instances |
++------+------------------------------------+----------+
+|1     |modulator_ipi_counter_0_0           |         1|
+|2     |modulator_ipi_frequency_trigger_0_0 |         1|
+|3     |modulator_ipi_pwm_0_0               |         1|
+|4     |modulator_ipi_sine_0_0              |         1|
+|5     |modulator_ipi_xlconstant_0_0        |         1|
+|6     |modulator_ipi_xlconstant_1_0        |         1|
+|7     |modulator_ipi_xlconstant_2_0        |         1|
+|8     |modulator_ipi_xlconstant_3_0        |         1|
++------+------------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------------+------+
+|      |Cell                                |Count |
++------+------------------------------------+------+
+|1     |modulator_ipi_counter_0_0           |     1|
+|2     |modulator_ipi_frequency_trigger_0_0 |     1|
+|3     |modulator_ipi_pwm_0_0               |     1|
+|4     |modulator_ipi_sine_0_0              |     1|
+|5     |modulator_ipi_xlconstant_0_0        |     1|
+|6     |modulator_ipi_xlconstant_1_0        |     1|
+|7     |modulator_ipi_xlconstant_2_0        |     1|
+|8     |modulator_ipi_xlconstant_3_0        |     1|
+|9     |IBUF                                |     2|
+|10    |OBUF                                |     1|
++------+------------------------------------+------+
+
+Report Instance Areas: 
++------+------------------+--------------+------+
+|      |Instance          |Module        |Cells |
++------+------------------+--------------+------+
+|1     |top               |              |   153|
+|2     |  modulator_ipi_i |modulator_ipi |   150|
++------+------------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1415.340 ; gain = 483.625 ; free physical = 1187 ; free virtual = 16914
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1415.340 ; gain = 113.480 ; free physical = 1188 ; free virtual = 16913
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1415.348 ; gain = 483.633 ; free physical = 1188 ; free virtual = 16913
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1419.340 ; gain = 420.121 ; free physical = 1186 ; free virtual = 16912
+INFO: [Common 17-1381] The checkpoint '/home/brian/0404/IP_Integrator/modulator_ipi/modulator_ipi.runs/synth_1/modulator_ipi_wrapper.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1419.340 ; gain = 0.000 ; free physical = 1190 ; free virtual = 16911
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  6 14:44:00 2017...
