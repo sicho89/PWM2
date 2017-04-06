@@ -9,13 +9,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="5480001fs"></ZoomEndTime>
-      <Cursor1Time time="740000fs"></Cursor1Time>
+      <ZoomStartTime time="600000fs"></ZoomStartTime>
+      <ZoomEndTime time="1282001fs"></ZoomEndTime>
+      <Cursor1Time time="890000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+      <NameColumnWidth column_width="258"></NameColumnWidth>
+      <ValueColumnWidth column_width="63"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="2" />
    <wave_markers>
@@ -26,6 +26,8 @@
       <obj_property name="ObjectShortName">sine_ampl_w[11:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="pwmmodulator/freq_trig_w">
       <obj_property name="DisplayName">FullPathName</obj_property>

@@ -1,0 +1,1444 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (lin64) Build 1756540 Mon Jan 23 19:11:19 MST 2017
+| Date         : Thu Apr  6 11:51:52 2017
+| Host         : brian-Linux-16-04 running 64-bit Ubuntu 16.04.2 LTS
+| Command      : report_timing_summary -warn_on_violation -max_paths 10 -file modulator_ip_wrapper_timing_summary_routed.rpt -rpx modulator_ip_wrapper_timing_summary_routed.rpx
+| Design       : modulator_ip_wrapper
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There is 1 port with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      3.763        0.000                      0                  227        0.109        0.000                      0                  227        4.500        0.000                       0                   112  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clk_p  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_p               3.763        0.000                      0                  227        0.109        0.000                      0                  227        4.500        0.000                       0                   112  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_p
+  To Clock:  clk_p
+
+Setup :            0  Failing Endpoints,  Worst Slack        3.763ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.109ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             3.763ns  (required time - arrival time)
+  Source:                 modulatorip/pwm/inst/count_r_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/pwm/inst/state_r_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_p rise@10.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        6.218ns  (logic 3.299ns (53.058%)  route 2.919ns (46.942%))
+  Logic Levels:           9  (CARRY4=5 LUT2=1 LUT6=3)
+  Clock Path Skew:        -0.061ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.107ns = ( 15.107 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.562ns
+    Clock Pessimism Removal (CPR):    0.394ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.490     1.490 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.661    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.762 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.800     5.562    modulatorip/pwm/inst/clk_in
+    SLICE_X103Y45        FDRE                                         r  modulatorip/pwm/inst/count_r_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X103Y45        FDRE (Prop_fdre_C_Q)         0.456     6.018 r  modulatorip/pwm/inst/count_r_reg[2]/Q
+                         net (fo=1, routed)           0.480     6.499    modulatorip/pwm/inst/count_r[2]
+    SLICE_X103Y45        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.674     7.173 r  modulatorip/pwm/inst/count_r0_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.173    modulatorip/pwm/inst/count_r0_carry_n_0
+    SLICE_X103Y46        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.287 r  modulatorip/pwm/inst/count_r0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.287    modulatorip/pwm/inst/count_r0_carry__0_n_0
+    SLICE_X103Y47        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     7.543 r  modulatorip/pwm/inst/count_r0_carry__1/O[2]
+                         net (fo=5, routed)           0.849     8.391    modulatorip/pwm/inst/count_r0_carry__1_n_5
+    SLICE_X104Y46        LUT6 (Prop_lut6_I2_O)        0.302     8.693 r  modulatorip/pwm/inst/state_r1_carry_i_1/O
+                         net (fo=1, routed)           0.000     8.693    modulatorip/pwm/inst/state_r1_carry_i_1_n_0
+    SLICE_X104Y46        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     9.069 r  modulatorip/pwm/inst/state_r1_carry/CO[3]
+                         net (fo=1, routed)           0.000     9.069    modulatorip/pwm/inst/state_r1_carry_n_0
+    SLICE_X104Y47        CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.254     9.323 r  modulatorip/pwm/inst/state_r1_carry__0/CO[0]
+                         net (fo=1, routed)           0.964    10.288    modulatorip/pwm/inst/state_r11_in
+    SLICE_X104Y45        LUT2 (Prop_lut2_I1_O)        0.395    10.683 f  modulatorip/pwm/inst/state_r[1]_i_11/O
+                         net (fo=1, routed)           0.449    11.132    modulatorip/pwm/inst/freq_ce/state_r_reg[0]_1
+    SLICE_X104Y48        LUT6 (Prop_lut6_I0_O)        0.348    11.480 r  modulatorip/pwm/inst/freq_ce/state_r[1]_i_5/O
+                         net (fo=2, routed)           0.176    11.656    modulatorip/pwm/inst/freq_ce_n_2
+    SLICE_X104Y48        LUT6 (Prop_lut6_I4_O)        0.124    11.780 r  modulatorip/pwm/inst/state_r[1]_i_1/O
+                         net (fo=1, routed)           0.000    11.780    modulatorip/pwm/inst/state_r[1]_i_1_n_0
+    SLICE_X104Y48        FDRE                                         r  modulatorip/pwm/inst/state_r_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)     10.000    10.000 r  
+    Y9                                                0.000    10.000 r  clk_p (IN)
+                         net (fo=0)                   0.000    10.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.420    11.420 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.392    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.483 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.624    15.107    modulatorip/pwm/inst/clk_in
+    SLICE_X104Y48        FDRE                                         r  modulatorip/pwm/inst/state_r_reg[1]/C
+                         clock pessimism              0.394    15.501    
+                         clock uncertainty           -0.035    15.466    
+    SLICE_X104Y48        FDRE (Setup_fdre_C_D)        0.077    15.543    modulatorip/pwm/inst/state_r_reg[1]
+  -------------------------------------------------------------------
+                         required time                         15.543    
+                         arrival time                         -11.780    
+  -------------------------------------------------------------------
+                         slack                                  3.763    
+
+Slack (MET) :             3.770ns  (required time - arrival time)
+  Source:                 modulatorip/pwm/inst/count_r_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/pwm/inst/state_r_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_p rise@10.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        6.215ns  (logic 3.299ns (53.084%)  route 2.916ns (46.916%))
+  Logic Levels:           9  (CARRY4=5 LUT2=1 LUT6=3)
+  Clock Path Skew:        -0.061ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.107ns = ( 15.107 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.562ns
+    Clock Pessimism Removal (CPR):    0.394ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.490     1.490 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.661    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.762 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.800     5.562    modulatorip/pwm/inst/clk_in
+    SLICE_X103Y45        FDRE                                         r  modulatorip/pwm/inst/count_r_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X103Y45        FDRE (Prop_fdre_C_Q)         0.456     6.018 r  modulatorip/pwm/inst/count_r_reg[2]/Q
+                         net (fo=1, routed)           0.480     6.499    modulatorip/pwm/inst/count_r[2]
+    SLICE_X103Y45        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.674     7.173 r  modulatorip/pwm/inst/count_r0_carry/CO[3]
+                         net (fo=1, routed)           0.000     7.173    modulatorip/pwm/inst/count_r0_carry_n_0
+    SLICE_X103Y46        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     7.287 r  modulatorip/pwm/inst/count_r0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.287    modulatorip/pwm/inst/count_r0_carry__0_n_0
+    SLICE_X103Y47        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     7.543 r  modulatorip/pwm/inst/count_r0_carry__1/O[2]
+                         net (fo=5, routed)           0.849     8.391    modulatorip/pwm/inst/count_r0_carry__1_n_5
+    SLICE_X104Y46        LUT6 (Prop_lut6_I2_O)        0.302     8.693 r  modulatorip/pwm/inst/state_r1_carry_i_1/O
+                         net (fo=1, routed)           0.000     8.693    modulatorip/pwm/inst/state_r1_carry_i_1_n_0
+    SLICE_X104Y46        CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.376     9.069 r  modulatorip/pwm/inst/state_r1_carry/CO[3]
+                         net (fo=1, routed)           0.000     9.069    modulatorip/pwm/inst/state_r1_carry_n_0
+    SLICE_X104Y47        CARRY4 (Prop_carry4_CI_CO[0])
+                                                      0.254     9.323 r  modulatorip/pwm/inst/state_r1_carry__0/CO[0]
+                         net (fo=1, routed)           0.964    10.288    modulatorip/pwm/inst/state_r11_in
+    SLICE_X104Y45        LUT2 (Prop_lut2_I1_O)        0.395    10.683 f  modulatorip/pwm/inst/state_r[1]_i_11/O
+                         net (fo=1, routed)           0.449    11.132    modulatorip/pwm/inst/freq_ce/state_r_reg[0]_1
+    SLICE_X104Y48        LUT6 (Prop_lut6_I0_O)        0.348    11.480 r  modulatorip/pwm/inst/freq_ce/state_r[1]_i_5/O
+                         net (fo=2, routed)           0.173    11.653    modulatorip/pwm/inst/freq_ce_n_2
+    SLICE_X104Y48        LUT6 (Prop_lut6_I4_O)        0.124    11.777 r  modulatorip/pwm/inst/state_r[0]_i_1/O
+                         net (fo=1, routed)           0.000    11.777    modulatorip/pwm/inst/state_r[0]_i_1_n_0
+    SLICE_X104Y48        FDRE                                         r  modulatorip/pwm/inst/state_r_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)     10.000    10.000 r  
+    Y9                                                0.000    10.000 r  clk_p (IN)
+                         net (fo=0)                   0.000    10.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.420    11.420 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.392    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.483 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.624    15.107    modulatorip/pwm/inst/clk_in
+    SLICE_X104Y48        FDRE                                         r  modulatorip/pwm/inst/state_r_reg[0]/C
+                         clock pessimism              0.394    15.501    
+                         clock uncertainty           -0.035    15.466    
+    SLICE_X104Y48        FDRE (Setup_fdre_C_D)        0.081    15.547    modulatorip/pwm/inst/state_r_reg[0]
+  -------------------------------------------------------------------
+                         required time                         15.547    
+                         arrival time                         -11.777    
+  -------------------------------------------------------------------
+                         slack                                  3.770    
+
+Slack (MET) :             4.725ns  (required time - arrival time)
+  Source:                 modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/pwm/inst/freq_ce/freq_cnt_reg[28]/R
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_p rise@10.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        4.620ns  (logic 1.588ns (34.369%)  route 3.032ns (65.631%))
+  Logic Levels:           6  (CARRY4=4 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.190ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.171ns = ( 15.171 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.641ns
+    Clock Pessimism Removal (CPR):    0.280ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.490     1.490 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.661    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.762 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.879     5.641    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y46        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y46        FDRE (Prop_fdre_C_Q)         0.456     6.097 r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]/Q
+                         net (fo=4, routed)           0.984     7.081    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]
+    SLICE_X108Y49        LUT2 (Prop_lut2_I1_O)        0.124     7.205 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry_i_7/O
+                         net (fo=1, routed)           0.000     7.205    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry_i_7_n_0
+    SLICE_X108Y49        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     7.738 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry/CO[3]
+                         net (fo=1, routed)           0.001     7.739    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry_n_0
+    SLICE_X108Y50        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.856 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.856    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__0_n_0
+    SLICE_X108Y51        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.973 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.973    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__1_n_0
+    SLICE_X108Y52        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.090 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__2/CO[3]
+                         net (fo=1, routed)           1.101     9.191    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__2_n_0
+    SLICE_X109Y51        LUT3 (Prop_lut3_I0_O)        0.124     9.315 r  modulatorip/pwm/inst/freq_ce/freq_trig_i_1/O
+                         net (fo=33, routed)          0.947    10.262    modulatorip/pwm/inst/freq_ce/freq_trig_i_1_n_0
+    SLICE_X110Y53        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[28]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)     10.000    10.000 r  
+    Y9                                                0.000    10.000 r  clk_p (IN)
+                         net (fo=0)                   0.000    10.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.420    11.420 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.392    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.483 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.689    15.171    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y53        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[28]/C
+                         clock pessimism              0.280    15.451    
+                         clock uncertainty           -0.035    15.416    
+    SLICE_X110Y53        FDRE (Setup_fdre_C_R)       -0.429    14.987    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[28]
+  -------------------------------------------------------------------
+                         required time                         14.987    
+                         arrival time                         -10.262    
+  -------------------------------------------------------------------
+                         slack                                  4.725    
+
+Slack (MET) :             4.725ns  (required time - arrival time)
+  Source:                 modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/pwm/inst/freq_ce/freq_cnt_reg[29]/R
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_p rise@10.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        4.620ns  (logic 1.588ns (34.369%)  route 3.032ns (65.631%))
+  Logic Levels:           6  (CARRY4=4 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.190ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.171ns = ( 15.171 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.641ns
+    Clock Pessimism Removal (CPR):    0.280ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.490     1.490 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.661    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.762 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.879     5.641    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y46        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y46        FDRE (Prop_fdre_C_Q)         0.456     6.097 r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]/Q
+                         net (fo=4, routed)           0.984     7.081    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]
+    SLICE_X108Y49        LUT2 (Prop_lut2_I1_O)        0.124     7.205 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry_i_7/O
+                         net (fo=1, routed)           0.000     7.205    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry_i_7_n_0
+    SLICE_X108Y49        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     7.738 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry/CO[3]
+                         net (fo=1, routed)           0.001     7.739    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry_n_0
+    SLICE_X108Y50        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.856 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.856    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__0_n_0
+    SLICE_X108Y51        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.973 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.973    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__1_n_0
+    SLICE_X108Y52        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.090 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__2/CO[3]
+                         net (fo=1, routed)           1.101     9.191    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__2_n_0
+    SLICE_X109Y51        LUT3 (Prop_lut3_I0_O)        0.124     9.315 r  modulatorip/pwm/inst/freq_ce/freq_trig_i_1/O
+                         net (fo=33, routed)          0.947    10.262    modulatorip/pwm/inst/freq_ce/freq_trig_i_1_n_0
+    SLICE_X110Y53        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[29]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)     10.000    10.000 r  
+    Y9                                                0.000    10.000 r  clk_p (IN)
+                         net (fo=0)                   0.000    10.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.420    11.420 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.392    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.483 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.689    15.171    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y53        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[29]/C
+                         clock pessimism              0.280    15.451    
+                         clock uncertainty           -0.035    15.416    
+    SLICE_X110Y53        FDRE (Setup_fdre_C_R)       -0.429    14.987    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[29]
+  -------------------------------------------------------------------
+                         required time                         14.987    
+                         arrival time                         -10.262    
+  -------------------------------------------------------------------
+                         slack                                  4.725    
+
+Slack (MET) :             4.725ns  (required time - arrival time)
+  Source:                 modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/pwm/inst/freq_ce/freq_cnt_reg[30]/R
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_p rise@10.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        4.620ns  (logic 1.588ns (34.369%)  route 3.032ns (65.631%))
+  Logic Levels:           6  (CARRY4=4 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.190ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.171ns = ( 15.171 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.641ns
+    Clock Pessimism Removal (CPR):    0.280ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.490     1.490 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.661    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.762 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.879     5.641    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y46        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y46        FDRE (Prop_fdre_C_Q)         0.456     6.097 r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]/Q
+                         net (fo=4, routed)           0.984     7.081    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]
+    SLICE_X108Y49        LUT2 (Prop_lut2_I1_O)        0.124     7.205 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry_i_7/O
+                         net (fo=1, routed)           0.000     7.205    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry_i_7_n_0
+    SLICE_X108Y49        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     7.738 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry/CO[3]
+                         net (fo=1, routed)           0.001     7.739    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry_n_0
+    SLICE_X108Y50        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.856 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.856    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__0_n_0
+    SLICE_X108Y51        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.973 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.973    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__1_n_0
+    SLICE_X108Y52        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.090 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__2/CO[3]
+                         net (fo=1, routed)           1.101     9.191    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__2_n_0
+    SLICE_X109Y51        LUT3 (Prop_lut3_I0_O)        0.124     9.315 r  modulatorip/pwm/inst/freq_ce/freq_trig_i_1/O
+                         net (fo=33, routed)          0.947    10.262    modulatorip/pwm/inst/freq_ce/freq_trig_i_1_n_0
+    SLICE_X110Y53        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[30]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)     10.000    10.000 r  
+    Y9                                                0.000    10.000 r  clk_p (IN)
+                         net (fo=0)                   0.000    10.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.420    11.420 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.392    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.483 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.689    15.171    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y53        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[30]/C
+                         clock pessimism              0.280    15.451    
+                         clock uncertainty           -0.035    15.416    
+    SLICE_X110Y53        FDRE (Setup_fdre_C_R)       -0.429    14.987    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[30]
+  -------------------------------------------------------------------
+                         required time                         14.987    
+                         arrival time                         -10.262    
+  -------------------------------------------------------------------
+                         slack                                  4.725    
+
+Slack (MET) :             4.725ns  (required time - arrival time)
+  Source:                 modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/pwm/inst/freq_ce/freq_cnt_reg[31]/R
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_p rise@10.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        4.620ns  (logic 1.588ns (34.369%)  route 3.032ns (65.631%))
+  Logic Levels:           6  (CARRY4=4 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.190ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.171ns = ( 15.171 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.641ns
+    Clock Pessimism Removal (CPR):    0.280ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.490     1.490 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.661    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.762 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.879     5.641    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y46        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y46        FDRE (Prop_fdre_C_Q)         0.456     6.097 r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]/Q
+                         net (fo=4, routed)           0.984     7.081    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]
+    SLICE_X108Y49        LUT2 (Prop_lut2_I1_O)        0.124     7.205 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry_i_7/O
+                         net (fo=1, routed)           0.000     7.205    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry_i_7_n_0
+    SLICE_X108Y49        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     7.738 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry/CO[3]
+                         net (fo=1, routed)           0.001     7.739    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry_n_0
+    SLICE_X108Y50        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.856 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     7.856    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__0_n_0
+    SLICE_X108Y51        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     7.973 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     7.973    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__1_n_0
+    SLICE_X108Y52        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.090 r  modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__2/CO[3]
+                         net (fo=1, routed)           1.101     9.191    modulatorip/pwm/inst/freq_ce/freq_trig0__15_carry__2_n_0
+    SLICE_X109Y51        LUT3 (Prop_lut3_I0_O)        0.124     9.315 r  modulatorip/pwm/inst/freq_ce/freq_trig_i_1/O
+                         net (fo=33, routed)          0.947    10.262    modulatorip/pwm/inst/freq_ce/freq_trig_i_1_n_0
+    SLICE_X110Y53        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[31]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)     10.000    10.000 r  
+    Y9                                                0.000    10.000 r  clk_p (IN)
+                         net (fo=0)                   0.000    10.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.420    11.420 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.392    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.483 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.689    15.171    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y53        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[31]/C
+                         clock pessimism              0.280    15.451    
+                         clock uncertainty           -0.035    15.416    
+    SLICE_X110Y53        FDRE (Setup_fdre_C_R)       -0.429    14.987    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[31]
+  -------------------------------------------------------------------
+                         required time                         14.987    
+                         arrival time                         -10.262    
+  -------------------------------------------------------------------
+                         slack                                  4.725    
+
+Slack (MET) :             4.781ns  (required time - arrival time)
+  Source:                 modulatorip/pwm/inst/freq_ce/freq_cnt_reg[19]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/pwm/inst/freq_ce/freq_cnt_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_p rise@10.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        4.585ns  (logic 1.368ns (29.839%)  route 3.217ns (70.161%))
+  Logic Levels:           4  (CARRY4=2 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.170ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.182ns = ( 15.182 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.631ns
+    Clock Pessimism Removal (CPR):    0.280ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.490     1.490 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.661    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.762 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.869     5.631    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y50        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y50        FDRE (Prop_fdre_C_Q)         0.456     6.087 f  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[19]/Q
+                         net (fo=5, routed)           1.253     7.340    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[19]
+    SLICE_X109Y49        LUT2 (Prop_lut2_I1_O)        0.124     7.464 r  modulatorip/pwm/inst/freq_ce/freq_trig0_carry__1_i_7/O
+                         net (fo=1, routed)           0.000     7.464    modulatorip/pwm/inst/freq_ce/freq_trig0_carry__1_i_7_n_0
+    SLICE_X109Y49        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     8.014 r  modulatorip/pwm/inst/freq_ce/freq_trig0_carry__1/CO[3]
+                         net (fo=1, routed)           0.001     8.015    modulatorip/pwm/inst/freq_ce/freq_trig0_carry__1_n_0
+    SLICE_X109Y50        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.129 r  modulatorip/pwm/inst/freq_ce/freq_trig0_carry__2/CO[3]
+                         net (fo=1, routed)           0.942     9.071    modulatorip/pwm/inst/freq_ce/freq_trig0_carry__2_n_0
+    SLICE_X109Y51        LUT3 (Prop_lut3_I2_O)        0.124     9.195 r  modulatorip/pwm/inst/freq_ce/freq_trig_i_1/O
+                         net (fo=33, routed)          1.022    10.216    modulatorip/pwm/inst/freq_ce/freq_trig_i_1_n_0
+    SLICE_X110Y46        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)     10.000    10.000 r  
+    Y9                                                0.000    10.000 r  clk_p (IN)
+                         net (fo=0)                   0.000    10.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.420    11.420 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.392    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.483 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.699    15.182    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y46        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[0]/C
+                         clock pessimism              0.280    15.462    
+                         clock uncertainty           -0.035    15.426    
+    SLICE_X110Y46        FDRE (Setup_fdre_C_R)       -0.429    14.997    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[0]
+  -------------------------------------------------------------------
+                         required time                         14.997    
+                         arrival time                         -10.216    
+  -------------------------------------------------------------------
+                         slack                                  4.781    
+
+Slack (MET) :             4.781ns  (required time - arrival time)
+  Source:                 modulatorip/pwm/inst/freq_ce/freq_cnt_reg[19]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/pwm/inst/freq_ce/freq_cnt_reg[1]/R
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_p rise@10.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        4.585ns  (logic 1.368ns (29.839%)  route 3.217ns (70.161%))
+  Logic Levels:           4  (CARRY4=2 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.170ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.182ns = ( 15.182 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.631ns
+    Clock Pessimism Removal (CPR):    0.280ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.490     1.490 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.661    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.762 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.869     5.631    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y50        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y50        FDRE (Prop_fdre_C_Q)         0.456     6.087 f  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[19]/Q
+                         net (fo=5, routed)           1.253     7.340    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[19]
+    SLICE_X109Y49        LUT2 (Prop_lut2_I1_O)        0.124     7.464 r  modulatorip/pwm/inst/freq_ce/freq_trig0_carry__1_i_7/O
+                         net (fo=1, routed)           0.000     7.464    modulatorip/pwm/inst/freq_ce/freq_trig0_carry__1_i_7_n_0
+    SLICE_X109Y49        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     8.014 r  modulatorip/pwm/inst/freq_ce/freq_trig0_carry__1/CO[3]
+                         net (fo=1, routed)           0.001     8.015    modulatorip/pwm/inst/freq_ce/freq_trig0_carry__1_n_0
+    SLICE_X109Y50        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.129 r  modulatorip/pwm/inst/freq_ce/freq_trig0_carry__2/CO[3]
+                         net (fo=1, routed)           0.942     9.071    modulatorip/pwm/inst/freq_ce/freq_trig0_carry__2_n_0
+    SLICE_X109Y51        LUT3 (Prop_lut3_I2_O)        0.124     9.195 r  modulatorip/pwm/inst/freq_ce/freq_trig_i_1/O
+                         net (fo=33, routed)          1.022    10.216    modulatorip/pwm/inst/freq_ce/freq_trig_i_1_n_0
+    SLICE_X110Y46        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[1]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)     10.000    10.000 r  
+    Y9                                                0.000    10.000 r  clk_p (IN)
+                         net (fo=0)                   0.000    10.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.420    11.420 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.392    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.483 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.699    15.182    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y46        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[1]/C
+                         clock pessimism              0.280    15.462    
+                         clock uncertainty           -0.035    15.426    
+    SLICE_X110Y46        FDRE (Setup_fdre_C_R)       -0.429    14.997    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[1]
+  -------------------------------------------------------------------
+                         required time                         14.997    
+                         arrival time                         -10.216    
+  -------------------------------------------------------------------
+                         slack                                  4.781    
+
+Slack (MET) :             4.781ns  (required time - arrival time)
+  Source:                 modulatorip/pwm/inst/freq_ce/freq_cnt_reg[19]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/pwm/inst/freq_ce/freq_cnt_reg[2]/R
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_p rise@10.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        4.585ns  (logic 1.368ns (29.839%)  route 3.217ns (70.161%))
+  Logic Levels:           4  (CARRY4=2 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.170ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.182ns = ( 15.182 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.631ns
+    Clock Pessimism Removal (CPR):    0.280ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.490     1.490 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.661    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.762 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.869     5.631    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y50        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y50        FDRE (Prop_fdre_C_Q)         0.456     6.087 f  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[19]/Q
+                         net (fo=5, routed)           1.253     7.340    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[19]
+    SLICE_X109Y49        LUT2 (Prop_lut2_I1_O)        0.124     7.464 r  modulatorip/pwm/inst/freq_ce/freq_trig0_carry__1_i_7/O
+                         net (fo=1, routed)           0.000     7.464    modulatorip/pwm/inst/freq_ce/freq_trig0_carry__1_i_7_n_0
+    SLICE_X109Y49        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     8.014 r  modulatorip/pwm/inst/freq_ce/freq_trig0_carry__1/CO[3]
+                         net (fo=1, routed)           0.001     8.015    modulatorip/pwm/inst/freq_ce/freq_trig0_carry__1_n_0
+    SLICE_X109Y50        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.129 r  modulatorip/pwm/inst/freq_ce/freq_trig0_carry__2/CO[3]
+                         net (fo=1, routed)           0.942     9.071    modulatorip/pwm/inst/freq_ce/freq_trig0_carry__2_n_0
+    SLICE_X109Y51        LUT3 (Prop_lut3_I2_O)        0.124     9.195 r  modulatorip/pwm/inst/freq_ce/freq_trig_i_1/O
+                         net (fo=33, routed)          1.022    10.216    modulatorip/pwm/inst/freq_ce/freq_trig_i_1_n_0
+    SLICE_X110Y46        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[2]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)     10.000    10.000 r  
+    Y9                                                0.000    10.000 r  clk_p (IN)
+                         net (fo=0)                   0.000    10.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.420    11.420 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.392    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.483 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.699    15.182    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y46        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[2]/C
+                         clock pessimism              0.280    15.462    
+                         clock uncertainty           -0.035    15.426    
+    SLICE_X110Y46        FDRE (Setup_fdre_C_R)       -0.429    14.997    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[2]
+  -------------------------------------------------------------------
+                         required time                         14.997    
+                         arrival time                         -10.216    
+  -------------------------------------------------------------------
+                         slack                                  4.781    
+
+Slack (MET) :             4.781ns  (required time - arrival time)
+  Source:                 modulatorip/pwm/inst/freq_ce/freq_cnt_reg[19]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]/R
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_p rise@10.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        4.585ns  (logic 1.368ns (29.839%)  route 3.217ns (70.161%))
+  Logic Levels:           4  (CARRY4=2 LUT2=1 LUT3=1)
+  Clock Path Skew:        -0.170ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    5.182ns = ( 15.182 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.631ns
+    Clock Pessimism Removal (CPR):    0.280ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.490     1.490 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.661    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.762 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.869     5.631    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y50        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y50        FDRE (Prop_fdre_C_Q)         0.456     6.087 f  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[19]/Q
+                         net (fo=5, routed)           1.253     7.340    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[19]
+    SLICE_X109Y49        LUT2 (Prop_lut2_I1_O)        0.124     7.464 r  modulatorip/pwm/inst/freq_ce/freq_trig0_carry__1_i_7/O
+                         net (fo=1, routed)           0.000     7.464    modulatorip/pwm/inst/freq_ce/freq_trig0_carry__1_i_7_n_0
+    SLICE_X109Y49        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     8.014 r  modulatorip/pwm/inst/freq_ce/freq_trig0_carry__1/CO[3]
+                         net (fo=1, routed)           0.001     8.015    modulatorip/pwm/inst/freq_ce/freq_trig0_carry__1_n_0
+    SLICE_X109Y50        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     8.129 r  modulatorip/pwm/inst/freq_ce/freq_trig0_carry__2/CO[3]
+                         net (fo=1, routed)           0.942     9.071    modulatorip/pwm/inst/freq_ce/freq_trig0_carry__2_n_0
+    SLICE_X109Y51        LUT3 (Prop_lut3_I2_O)        0.124     9.195 r  modulatorip/pwm/inst/freq_ce/freq_trig_i_1/O
+                         net (fo=33, routed)          1.022    10.216    modulatorip/pwm/inst/freq_ce/freq_trig_i_1_n_0
+    SLICE_X110Y46        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)     10.000    10.000 r  
+    Y9                                                0.000    10.000 r  clk_p (IN)
+                         net (fo=0)                   0.000    10.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         1.420    11.420 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           1.972    13.392    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.483 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         1.699    15.182    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y46        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]/C
+                         clock pessimism              0.280    15.462    
+                         clock uncertainty           -0.035    15.426    
+    SLICE_X110Y46        FDRE (Setup_fdre_C_R)       -0.429    14.997    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[3]
+  -------------------------------------------------------------------
+                         required time                         14.997    
+                         arrival time                         -10.216    
+  -------------------------------------------------------------------
+                         slack                                  4.781    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.109ns  (arrival time - required time)
+  Source:                 modulatorip/counter/inst/cnt_out_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/sine/inst/sine_out_reg/ADDRARDADDR[7]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_p rise@0.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        0.351ns  (logic 0.141ns (40.129%)  route 0.210ns (59.871%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.059ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.120ns
+    Source Clock Delay      (SCD):    1.559ns
+    Clock Pessimism Removal (CPR):    0.501ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.921    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.947 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.612     1.559    modulatorip/counter/inst/clk_in
+    SLICE_X105Y44        FDRE                                         r  modulatorip/counter/inst/cnt_out_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X105Y44        FDRE (Prop_fdre_C_Q)         0.141     1.700 r  modulatorip/counter/inst/cnt_out_reg[3]/Q
+                         net (fo=1, routed)           0.210     1.910    modulatorip/sine/inst/ampl_cnt[3]
+    RAMB18_X5Y18         RAMB18E1                                     r  modulatorip/sine/inst/sine_out_reg/ADDRARDADDR[7]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.165    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.194 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.925     2.120    modulatorip/sine/inst/clk_in
+    RAMB18_X5Y18         RAMB18E1                                     r  modulatorip/sine/inst/sine_out_reg/CLKARDCLK
+                         clock pessimism             -0.501     1.618    
+    RAMB18_X5Y18         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[7])
+                                                      0.183     1.801    modulatorip/sine/inst/sine_out_reg
+  -------------------------------------------------------------------
+                         required time                         -1.801    
+                         arrival time                           1.910    
+  -------------------------------------------------------------------
+                         slack                                  0.109    
+
+Slack (MET) :             0.116ns  (arrival time - required time)
+  Source:                 modulatorip/freq_trig/inst/freq_cnt_reg[22]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/freq_trig/inst/freq_cnt_reg[24]/D
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_p rise@0.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        0.489ns  (logic 0.355ns (72.545%)  route 0.134ns (27.455%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.268ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.102ns
+    Source Clock Delay      (SCD):    1.587ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.921    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.947 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.640     1.587    modulatorip/freq_trig/inst/clk_in
+    SLICE_X106Y49        FDRE                                         r  modulatorip/freq_trig/inst/freq_cnt_reg[22]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X106Y49        FDRE (Prop_fdre_C_Q)         0.141     1.728 r  modulatorip/freq_trig/inst/freq_cnt_reg[22]/Q
+                         net (fo=5, routed)           0.134     1.861    modulatorip/freq_trig/inst/freq_cnt_reg[22]
+    SLICE_X106Y49        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     2.021 r  modulatorip/freq_trig/inst/freq_cnt_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     2.022    modulatorip/freq_trig/inst/freq_cnt_reg[20]_i_1_n_0
+    SLICE_X106Y50        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.054     2.076 r  modulatorip/freq_trig/inst/freq_cnt_reg[24]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.076    modulatorip/freq_trig/inst/freq_cnt_reg[24]_i_1_n_7
+    SLICE_X106Y50        FDRE                                         r  modulatorip/freq_trig/inst/freq_cnt_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.165    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.194 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.908     2.102    modulatorip/freq_trig/inst/clk_in
+    SLICE_X106Y50        FDRE                                         r  modulatorip/freq_trig/inst/freq_cnt_reg[24]/C
+                         clock pessimism             -0.247     1.855    
+    SLICE_X106Y50        FDRE (Hold_fdre_C_D)         0.105     1.960    modulatorip/freq_trig/inst/freq_cnt_reg[24]
+  -------------------------------------------------------------------
+                         required time                         -1.960    
+                         arrival time                           2.076    
+  -------------------------------------------------------------------
+                         slack                                  0.116    
+
+Slack (MET) :             0.126ns  (arrival time - required time)
+  Source:                 modulatorip/pwm/inst/freq_ce/freq_cnt_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/pwm/inst/freq_ce/freq_cnt_reg[16]/D
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_p rise@0.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        0.502ns  (logic 0.355ns (70.781%)  route 0.147ns (29.219%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.270ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.105ns
+    Source Clock Delay      (SCD):    1.588ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.921    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.947 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.641     1.588    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y49        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y49        FDRE (Prop_fdre_C_Q)         0.141     1.729 r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[14]/Q
+                         net (fo=5, routed)           0.146     1.875    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[14]
+    SLICE_X110Y49        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     2.035 r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     2.035    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[12]_i_1_n_0
+    SLICE_X110Y50        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.054     2.089 r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[16]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.089    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[16]_i_1_n_7
+    SLICE_X110Y50        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.165    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.194 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.911     2.105    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y50        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[16]/C
+                         clock pessimism             -0.247     1.858    
+    SLICE_X110Y50        FDRE (Hold_fdre_C_D)         0.105     1.963    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[16]
+  -------------------------------------------------------------------
+                         required time                         -1.963    
+                         arrival time                           2.089    
+  -------------------------------------------------------------------
+                         slack                                  0.126    
+
+Slack (MET) :             0.127ns  (arrival time - required time)
+  Source:                 modulatorip/freq_trig/inst/freq_cnt_reg[22]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/freq_trig/inst/freq_cnt_reg[26]/D
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_p rise@0.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        0.500ns  (logic 0.366ns (73.149%)  route 0.134ns (26.851%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.268ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.102ns
+    Source Clock Delay      (SCD):    1.587ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.921    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.947 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.640     1.587    modulatorip/freq_trig/inst/clk_in
+    SLICE_X106Y49        FDRE                                         r  modulatorip/freq_trig/inst/freq_cnt_reg[22]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X106Y49        FDRE (Prop_fdre_C_Q)         0.141     1.728 r  modulatorip/freq_trig/inst/freq_cnt_reg[22]/Q
+                         net (fo=5, routed)           0.134     1.861    modulatorip/freq_trig/inst/freq_cnt_reg[22]
+    SLICE_X106Y49        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     2.021 r  modulatorip/freq_trig/inst/freq_cnt_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     2.022    modulatorip/freq_trig/inst/freq_cnt_reg[20]_i_1_n_0
+    SLICE_X106Y50        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.065     2.087 r  modulatorip/freq_trig/inst/freq_cnt_reg[24]_i_1/O[2]
+                         net (fo=1, routed)           0.000     2.087    modulatorip/freq_trig/inst/freq_cnt_reg[24]_i_1_n_5
+    SLICE_X106Y50        FDRE                                         r  modulatorip/freq_trig/inst/freq_cnt_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.165    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.194 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.908     2.102    modulatorip/freq_trig/inst/clk_in
+    SLICE_X106Y50        FDRE                                         r  modulatorip/freq_trig/inst/freq_cnt_reg[26]/C
+                         clock pessimism             -0.247     1.855    
+    SLICE_X106Y50        FDRE (Hold_fdre_C_D)         0.105     1.960    modulatorip/freq_trig/inst/freq_cnt_reg[26]
+  -------------------------------------------------------------------
+                         required time                         -1.960    
+                         arrival time                           2.087    
+  -------------------------------------------------------------------
+                         slack                                  0.127    
+
+Slack (MET) :             0.137ns  (arrival time - required time)
+  Source:                 modulatorip/pwm/inst/freq_ce/freq_cnt_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/pwm/inst/freq_ce/freq_cnt_reg[18]/D
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_p rise@0.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        0.513ns  (logic 0.366ns (71.408%)  route 0.147ns (28.592%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.270ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.105ns
+    Source Clock Delay      (SCD):    1.588ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.921    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.947 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.641     1.588    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y49        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y49        FDRE (Prop_fdre_C_Q)         0.141     1.729 r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[14]/Q
+                         net (fo=5, routed)           0.146     1.875    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[14]
+    SLICE_X110Y49        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     2.035 r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     2.035    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[12]_i_1_n_0
+    SLICE_X110Y50        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.065     2.100 r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[16]_i_1/O[2]
+                         net (fo=1, routed)           0.000     2.100    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[16]_i_1_n_5
+    SLICE_X110Y50        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.165    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.194 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.911     2.105    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y50        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[18]/C
+                         clock pessimism             -0.247     1.858    
+    SLICE_X110Y50        FDRE (Hold_fdre_C_D)         0.105     1.963    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[18]
+  -------------------------------------------------------------------
+                         required time                         -1.963    
+                         arrival time                           2.100    
+  -------------------------------------------------------------------
+                         slack                                  0.137    
+
+Slack (MET) :             0.152ns  (arrival time - required time)
+  Source:                 modulatorip/freq_trig/inst/freq_cnt_reg[22]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/freq_trig/inst/freq_cnt_reg[25]/D
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_p rise@0.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        0.525ns  (logic 0.391ns (74.427%)  route 0.134ns (25.573%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.268ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.102ns
+    Source Clock Delay      (SCD):    1.587ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.921    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.947 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.640     1.587    modulatorip/freq_trig/inst/clk_in
+    SLICE_X106Y49        FDRE                                         r  modulatorip/freq_trig/inst/freq_cnt_reg[22]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X106Y49        FDRE (Prop_fdre_C_Q)         0.141     1.728 r  modulatorip/freq_trig/inst/freq_cnt_reg[22]/Q
+                         net (fo=5, routed)           0.134     1.861    modulatorip/freq_trig/inst/freq_cnt_reg[22]
+    SLICE_X106Y49        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     2.021 r  modulatorip/freq_trig/inst/freq_cnt_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     2.022    modulatorip/freq_trig/inst/freq_cnt_reg[20]_i_1_n_0
+    SLICE_X106Y50        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.090     2.112 r  modulatorip/freq_trig/inst/freq_cnt_reg[24]_i_1/O[1]
+                         net (fo=1, routed)           0.000     2.112    modulatorip/freq_trig/inst/freq_cnt_reg[24]_i_1_n_6
+    SLICE_X106Y50        FDRE                                         r  modulatorip/freq_trig/inst/freq_cnt_reg[25]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.165    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.194 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.908     2.102    modulatorip/freq_trig/inst/clk_in
+    SLICE_X106Y50        FDRE                                         r  modulatorip/freq_trig/inst/freq_cnt_reg[25]/C
+                         clock pessimism             -0.247     1.855    
+    SLICE_X106Y50        FDRE (Hold_fdre_C_D)         0.105     1.960    modulatorip/freq_trig/inst/freq_cnt_reg[25]
+  -------------------------------------------------------------------
+                         required time                         -1.960    
+                         arrival time                           2.112    
+  -------------------------------------------------------------------
+                         slack                                  0.152    
+
+Slack (MET) :             0.152ns  (arrival time - required time)
+  Source:                 modulatorip/freq_trig/inst/freq_cnt_reg[22]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/freq_trig/inst/freq_cnt_reg[27]/D
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_p rise@0.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        0.525ns  (logic 0.391ns (74.427%)  route 0.134ns (25.573%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.268ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.102ns
+    Source Clock Delay      (SCD):    1.587ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.921    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.947 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.640     1.587    modulatorip/freq_trig/inst/clk_in
+    SLICE_X106Y49        FDRE                                         r  modulatorip/freq_trig/inst/freq_cnt_reg[22]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X106Y49        FDRE (Prop_fdre_C_Q)         0.141     1.728 r  modulatorip/freq_trig/inst/freq_cnt_reg[22]/Q
+                         net (fo=5, routed)           0.134     1.861    modulatorip/freq_trig/inst/freq_cnt_reg[22]
+    SLICE_X106Y49        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     2.021 r  modulatorip/freq_trig/inst/freq_cnt_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     2.022    modulatorip/freq_trig/inst/freq_cnt_reg[20]_i_1_n_0
+    SLICE_X106Y50        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.090     2.112 r  modulatorip/freq_trig/inst/freq_cnt_reg[24]_i_1/O[3]
+                         net (fo=1, routed)           0.000     2.112    modulatorip/freq_trig/inst/freq_cnt_reg[24]_i_1_n_4
+    SLICE_X106Y50        FDRE                                         r  modulatorip/freq_trig/inst/freq_cnt_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.165    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.194 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.908     2.102    modulatorip/freq_trig/inst/clk_in
+    SLICE_X106Y50        FDRE                                         r  modulatorip/freq_trig/inst/freq_cnt_reg[27]/C
+                         clock pessimism             -0.247     1.855    
+    SLICE_X106Y50        FDRE (Hold_fdre_C_D)         0.105     1.960    modulatorip/freq_trig/inst/freq_cnt_reg[27]
+  -------------------------------------------------------------------
+                         required time                         -1.960    
+                         arrival time                           2.112    
+  -------------------------------------------------------------------
+                         slack                                  0.152    
+
+Slack (MET) :             0.155ns  (arrival time - required time)
+  Source:                 modulatorip/freq_trig/inst/freq_cnt_reg[22]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/freq_trig/inst/freq_cnt_reg[28]/D
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_p rise@0.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        0.528ns  (logic 0.394ns (74.572%)  route 0.134ns (25.428%))
+  Logic Levels:           3  (CARRY4=3)
+  Clock Path Skew:        0.268ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.102ns
+    Source Clock Delay      (SCD):    1.587ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.921    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.947 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.640     1.587    modulatorip/freq_trig/inst/clk_in
+    SLICE_X106Y49        FDRE                                         r  modulatorip/freq_trig/inst/freq_cnt_reg[22]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X106Y49        FDRE (Prop_fdre_C_Q)         0.141     1.728 r  modulatorip/freq_trig/inst/freq_cnt_reg[22]/Q
+                         net (fo=5, routed)           0.134     1.861    modulatorip/freq_trig/inst/freq_cnt_reg[22]
+    SLICE_X106Y49        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     2.021 r  modulatorip/freq_trig/inst/freq_cnt_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     2.022    modulatorip/freq_trig/inst/freq_cnt_reg[20]_i_1_n_0
+    SLICE_X106Y50        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.039     2.061 r  modulatorip/freq_trig/inst/freq_cnt_reg[24]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     2.061    modulatorip/freq_trig/inst/freq_cnt_reg[24]_i_1_n_0
+    SLICE_X106Y51        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.054     2.115 r  modulatorip/freq_trig/inst/freq_cnt_reg[28]_i_1/O[0]
+                         net (fo=1, routed)           0.000     2.115    modulatorip/freq_trig/inst/freq_cnt_reg[28]_i_1_n_7
+    SLICE_X106Y51        FDRE                                         r  modulatorip/freq_trig/inst/freq_cnt_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.165    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.194 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.908     2.102    modulatorip/freq_trig/inst/clk_in
+    SLICE_X106Y51        FDRE                                         r  modulatorip/freq_trig/inst/freq_cnt_reg[28]/C
+                         clock pessimism             -0.247     1.855    
+    SLICE_X106Y51        FDRE (Hold_fdre_C_D)         0.105     1.960    modulatorip/freq_trig/inst/freq_cnt_reg[28]
+  -------------------------------------------------------------------
+                         required time                         -1.960    
+                         arrival time                           2.115    
+  -------------------------------------------------------------------
+                         slack                                  0.155    
+
+Slack (MET) :             0.160ns  (arrival time - required time)
+  Source:                 modulatorip/counter/inst/cnt_out_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/sine/inst/sine_out_reg/ADDRARDADDR[6]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_p rise@0.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        0.403ns  (logic 0.141ns (34.993%)  route 0.262ns (65.007%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.059ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.120ns
+    Source Clock Delay      (SCD):    1.559ns
+    Clock Pessimism Removal (CPR):    0.501ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.921    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.947 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.612     1.559    modulatorip/counter/inst/clk_in
+    SLICE_X105Y44        FDRE                                         r  modulatorip/counter/inst/cnt_out_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X105Y44        FDRE (Prop_fdre_C_Q)         0.141     1.700 r  modulatorip/counter/inst/cnt_out_reg[2]/Q
+                         net (fo=1, routed)           0.262     1.962    modulatorip/sine/inst/ampl_cnt[2]
+    RAMB18_X5Y18         RAMB18E1                                     r  modulatorip/sine/inst/sine_out_reg/ADDRARDADDR[6]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.165    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.194 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.925     2.120    modulatorip/sine/inst/clk_in
+    RAMB18_X5Y18         RAMB18E1                                     r  modulatorip/sine/inst/sine_out_reg/CLKARDCLK
+                         clock pessimism             -0.501     1.618    
+    RAMB18_X5Y18         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[6])
+                                                      0.183     1.801    modulatorip/sine/inst/sine_out_reg
+  -------------------------------------------------------------------
+                         required time                         -1.801    
+                         arrival time                           1.962    
+  -------------------------------------------------------------------
+                         slack                                  0.160    
+
+Slack (MET) :             0.162ns  (arrival time - required time)
+  Source:                 modulatorip/pwm/inst/freq_ce/freq_cnt_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            modulatorip/pwm/inst/freq_ce/freq_cnt_reg[17]/D
+                            (rising edge-triggered cell FDRE clocked by clk_p  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_p rise@0.000ns - clk_p rise@0.000ns)
+  Data Path Delay:        0.538ns  (logic 0.391ns (72.738%)  route 0.147ns (27.262%))
+  Logic Levels:           2  (CARRY4=2)
+  Clock Path Skew:        0.270ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.105ns
+    Source Clock Delay      (SCD):    1.588ns
+    Clock Pessimism Removal (CPR):    0.247ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.258     0.258 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.921    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.947 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.641     1.588    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y49        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y49        FDRE (Prop_fdre_C_Q)         0.141     1.729 r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[14]/Q
+                         net (fo=5, routed)           0.146     1.875    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[14]
+    SLICE_X110Y49        CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.160     2.035 r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     2.035    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[12]_i_1_n_0
+    SLICE_X110Y50        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.090     2.125 r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[16]_i_1/O[1]
+                         net (fo=1, routed)           0.000     2.125    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[16]_i_1_n_6
+    SLICE_X110Y50        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_p rise edge)      0.000     0.000 r  
+    Y9                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    Y9                   IBUF (Prop_ibuf_I_O)         0.446     0.446 r  clk_p_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.165    clk_p_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.194 r  clk_p_IBUF_BUFG_inst/O
+                         net (fo=111, routed)         0.911     2.105    modulatorip/pwm/inst/freq_ce/clk_in
+    SLICE_X110Y50        FDRE                                         r  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[17]/C
+                         clock pessimism             -0.247     1.858    
+    SLICE_X110Y50        FDRE (Hold_fdre_C_D)         0.105     1.963    modulatorip/pwm/inst/freq_ce/freq_cnt_reg[17]
+  -------------------------------------------------------------------
+                         required time                         -1.963    
+                         arrival time                           2.125    
+  -------------------------------------------------------------------
+                         slack                                  0.162    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_p
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk_p }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB18_X5Y18   modulatorip/sine/inst/sine_out_reg/CLKARDCLK
+Min Period        n/a     BUFG/I              n/a            2.155         10.000      7.845      BUFGCTRL_X0Y0  clk_p_IBUF_BUFG_inst/I
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X106Y43  modulatorip/counter/inst/cnt_out_r_reg[0]/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X106Y43  modulatorip/counter/inst/cnt_out_r_reg[1]/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X106Y43  modulatorip/counter/inst/cnt_out_r_reg[2]/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X104Y44  modulatorip/counter/inst/cnt_out_r_reg[3]/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X104Y44  modulatorip/counter/inst/cnt_out_r_reg[4]/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X104Y44  modulatorip/counter/inst/cnt_out_r_reg[5]/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X105Y43  modulatorip/counter/inst/cnt_out_r_reg[6]/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X105Y43  modulatorip/counter/inst/cnt_out_r_reg[7]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X110Y50  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[17]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X110Y50  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[18]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X110Y50  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[19]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X110Y51  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[20]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X110Y51  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[21]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X110Y51  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[22]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X110Y51  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[23]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X110Y52  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[24]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X110Y52  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[25]/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X110Y52  modulatorip/pwm/inst/freq_ce/freq_cnt_reg[26]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X104Y44  modulatorip/counter/inst/cnt_out_r_reg[3]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X104Y44  modulatorip/counter/inst/cnt_out_r_reg[4]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X104Y44  modulatorip/counter/inst/cnt_out_r_reg[5]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X105Y43  modulatorip/counter/inst/cnt_out_r_reg[6]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X105Y43  modulatorip/counter/inst/cnt_out_r_reg[7]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X106Y50  modulatorip/freq_trig/inst/freq_cnt_reg[24]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X106Y50  modulatorip/freq_trig/inst/freq_cnt_reg[25]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X106Y50  modulatorip/freq_trig/inst/freq_cnt_reg[26]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X106Y50  modulatorip/freq_trig/inst/freq_cnt_reg[27]/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X106Y51  modulatorip/freq_trig/inst/freq_cnt_reg[28]/C
+
+
+

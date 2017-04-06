@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1491447036">
+  <File Type="VDS-TIMING-PB" Name="modulator_ip_wrapper_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="modulator_ip_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-RDS" Name="modulator_ip_wrapper.vds"/>
+  <File Type="PA-TCL" Name="modulator_ip_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="modulator_ip_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="modulator_ip_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="modulator_ip_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="modulator_ip_wrapper.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/modulator_source_files/modulator_ip_rtl.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../modulator_source_files/modulator_ip_rtl.v"/>
+        <Attr Name="ImportTime" Val="1491446266"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/modulator_source_files/modulator_ip_wrapper_rtl.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../modulator_source_files/modulator_ip_wrapper_rtl.v"/>
+        <Attr Name="ImportTime" Val="1491446697"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="modulator_ip_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/modulator_source_files/modulator.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../modulator_source_files/modulator.xdc"/>
+        <Attr Name="ImportTime" Val="1491380772"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="pwm_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="sine_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="frequency_trigger_ip"/>
+  <BlockFileSet Type="BlockSrcs" Name="counter_ip"/>
+</GenRun>

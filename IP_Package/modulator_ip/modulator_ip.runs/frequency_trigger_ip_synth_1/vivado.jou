@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Thu Apr  6 11:17:52 2017
+# Process ID: 28092
+# Current directory: /home/brian/0404/IP_Package/modulator_ip/modulator_ip.runs/frequency_trigger_ip_synth_1
+# Command line: vivado -log frequency_trigger_ip.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source frequency_trigger_ip.tcl
+# Log file: /home/brian/0404/IP_Package/modulator_ip/modulator_ip.runs/frequency_trigger_ip_synth_1/frequency_trigger_ip.vds
+# Journal file: /home/brian/0404/IP_Package/modulator_ip/modulator_ip.runs/frequency_trigger_ip_synth_1/vivado.jou
+#-----------------------------------------------------------
+source frequency_trigger_ip.tcl -notrace

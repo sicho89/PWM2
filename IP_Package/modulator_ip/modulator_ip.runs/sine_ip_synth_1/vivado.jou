@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Thu Apr  6 11:22:01 2017
+# Process ID: 28796
+# Current directory: /home/brian/0404/IP_Package/modulator_ip/modulator_ip.runs/sine_ip_synth_1
+# Command line: vivado -log sine_ip.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sine_ip.tcl
+# Log file: /home/brian/0404/IP_Package/modulator_ip/modulator_ip.runs/sine_ip_synth_1/sine_ip.vds
+# Journal file: /home/brian/0404/IP_Package/modulator_ip/modulator_ip.runs/sine_ip_synth_1/vivado.jou
+#-----------------------------------------------------------
+source sine_ip.tcl -notrace
