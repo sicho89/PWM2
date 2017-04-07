@@ -1,0 +1,21 @@
+Vivado Simulator 2016.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2016.4/bin/unwrapped/lnx64.o/xelab -wto f2c344a00fe540779e2b3035b1e381ec --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot modulator_axi_ip_tb_behav xil_defaultlib.modulator_axi_ip_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 2 for port s00_axi_rresp [/home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.srcs/sim_1/imports/modulator_source_files/modulator_axi_ip_tb.v:85]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.frequency_trigger
+Compiling module xil_defaultlib.counter(cnt_value_p=8'b11111111,...
+Compiling module xil_defaultlib.sine(depth_p=8'b01000,width_p=8'...
+Compiling module xil_defaultlib.pwm(width_p=8'b01100)
+Compiling module xil_defaultlib.modulator
+Compiling module xil_defaultlib.modulator_axi_ip_v1_0_S00_AXI(de...
+Compiling module xil_defaultlib.modulator_axi_ip_v1_0
+Compiling module xil_defaultlib.modulator_axi_ip_0
+Compiling module xil_defaultlib.modulator_axi_ip_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot modulator_axi_ip_tb_behav

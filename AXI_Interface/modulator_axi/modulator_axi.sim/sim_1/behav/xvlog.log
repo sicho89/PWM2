@@ -1,0 +1,20 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.srcs/sources_1/ip/modulator_axi_ip_0/src/frequency_trigger_rtl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module frequency_trigger
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.srcs/sources_1/ip/modulator_axi_ip_0/src/sine_rtl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sine
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.srcs/sources_1/ip/modulator_axi_ip_0/src/pwm_rtl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.srcs/sources_1/ip/modulator_axi_ip_0/src/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.srcs/sources_1/ip/modulator_axi_ip_0/src/modulator_rtl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module modulator
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.srcs/sources_1/ip/modulator_axi_ip_0/hdl/modulator_axi_ip_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module modulator_axi_ip_v1_0_S00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.srcs/sources_1/ip/modulator_axi_ip_0/hdl/modulator_axi_ip_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module modulator_axi_ip_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.srcs/sources_1/ip/modulator_axi_ip_0/sim/modulator_axi_ip_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module modulator_axi_ip_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.srcs/sim_1/imports/modulator_source_files/modulator_axi_ip_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module modulator_axi_ip_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

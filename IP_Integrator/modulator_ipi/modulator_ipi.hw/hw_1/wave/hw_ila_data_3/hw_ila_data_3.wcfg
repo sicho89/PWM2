@@ -9,9 +9,9 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="2048001fs"></ZoomEndTime>
-      <Cursor1Time time="241000fs"></Cursor1Time>
+      <ZoomStartTime time="159047fs"></ZoomStartTime>
+      <ZoomEndTime time="2119048fs"></ZoomEndTime>
+      <Cursor1Time time="1001000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="138"></NameColumnWidth>
@@ -26,6 +26,8 @@
       <obj_property name="ObjectShortName">sine_0_sine_out[11:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="modulator_ipi_i/frequency_trigger_0_freq_trig">
       <obj_property name="DisplayName">FullPathName</obj_property>
