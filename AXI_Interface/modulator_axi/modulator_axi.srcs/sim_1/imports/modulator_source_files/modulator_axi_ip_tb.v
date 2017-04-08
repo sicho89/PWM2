@@ -105,77 +105,47 @@ begin
     #50 s00_axi_aresetn_r = 1'b1;
     @ (negedge s00_axi_aclk_r);
 
+    axi_lite_data_write(4'b0100, div_factor_freqhigh_p);
     // write div_factor_freqhigh value into appropriate register
-    s00_axi_awaddr_r = 4'b0100;
-    s00_axi_awvalid_r = 1'b1;
-    s00_axi_wdata_r = div_factor_freqhigh_p;
-    s00_axi_wvalid_w = 1'b1;
-    s00_axi_wstrb_r = 4'b1111;
-    s00_axi_bready_r= 1'b1;
-    
-    @ (posedge s00_axi_awready_w);
-    @ (negedge s00_axi_awready_w);
-    @ (negedge s00_axi_aclk_r);
-    s00_axi_awaddr_r = 4'b0000;
-    s00_axi_awvalid_r = 1'b0;
-    s00_axi_wdata_r = 32'b0;
-    s00_axi_wvalid_w = 1'b0;
-    s00_axi_wstrb_r = 4'b0000;
-    
-    @ (negedge s00_axi_bvalid_w);
-    @ (negedge s00_axi_aclk_r);      
-    s00_axi_bready_r  <= 1'b0;
-    
-    @ (negedge s00_axi_aclk_r);
-    
+    axi_lite_data_write(4'b1000, div_factor_freqlow_p);
      // write div_factor_freqlow value into appropriate register
-     s00_axi_awaddr_r = 4'b1000;
-     s00_axi_awvalid_r = 1'b1;
-     s00_axi_wdata_r = div_factor_freqlow_p;
-     s00_axi_wvalid_w = 1'b1;
-     s00_axi_wstrb_r = 4'b1111;
-     s00_axi_bready_r = 1'b1;
-     
-     @ (posedge s00_axi_awready_w);
-     @ (negedge s00_axi_awready_w);
-     @ (negedge s00_axi_aclk_r);
-     s00_axi_awaddr_r = 4'b0000;
-     s00_axi_awvalid_r = 1'b0;
-     s00_axi_wdata_r = 32'b0;
-     s00_axi_wvalid_w = 1'b0;
-     s00_axi_wstrb_r = 4'b0000;
-     
-     @ (negedge s00_axi_bvalid_w);
-     @ (negedge s00_axi_aclk_r);      
-     s00_axi_bready_r = 1'b0;
-     
-     @ (negedge s00_axi_aclk_r);
           
      // we are waiting for one period of pwm signal when sw0=0
      #100000000;    // 100 ms
-     
+
+    axi_lite_data_write(4'b0000, 32'b1);     
      // write value sw0=1 into appropriate register
-     s00_axi_awaddr_r = 4'b0000;
-     s00_axi_awvalid_r = 1'b1;
-     s00_axi_wdata_r = 32'b1;
-     s00_axi_wvalid_w = 1'b1;
-     s00_axi_wstrb_r = 4'b1111;
-     s00_axi_bready_r = 1'b1;
-     
-     @ (posedge s00_axi_awready_w);
-     @ (negedge s00_axi_awready_w);
-     @ (negedge s00_axi_aclk_r);
-     s00_axi_awaddr_r = 4'b0000;
-     s00_axi_awvalid_r = 1'b0;
-     s00_axi_wdata_r = 32'b0;
-     s00_axi_wvalid_w = 1'b0;
-     s00_axi_wstrb_r = 4'b0000;
-     
-     @ (negedge s00_axi_bvalid_w);
-     @ (negedge s00_axi_aclk_r);       
-     s00_axi_bready_r = 1'b0;
-     
-     @ (negedge s00_axi_aclk_r);
+     $finish;
  end
  
+ task axi_lite_data_write;
+    input [3:0] axi_4b_addr;
+    input integer axi_32b_data;
+    begin
+        $display($time, " AXI data write, addr=%b, data=%h", axi_4b_addr, axi_32b_data);
+        s00_axi_awaddr_r = axi_4b_addr;
+        s00_axi_awvalid_r = 1'b1;
+        s00_axi_wdata_r = axi_32b_data;
+        s00_axi_wvalid_w = 1'b1;
+        s00_axi_wstrb_r = 4'b1111;
+        s00_axi_bready_r= 1'b1;
+        
+        @ (posedge s00_axi_awready_w);
+        @ (negedge s00_axi_awready_w);
+        @ (negedge s00_axi_aclk_r);
+        s00_axi_awaddr_r = 4'b0000;
+        s00_axi_awvalid_r = 1'b0;
+        s00_axi_wdata_r = 32'b0;
+        s00_axi_wvalid_w = 1'b0;
+        s00_axi_wstrb_r = 4'b0000;
+        
+        @ (negedge s00_axi_bvalid_w);
+        @ (negedge s00_axi_aclk_r);      
+        s00_axi_bready_r  <= 1'b0;
+        
+        @ (negedge s00_axi_aclk_r);
+    
+    end
+  endtask // of axi_lite_data_write
+    
  endmodule          

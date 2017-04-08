@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="17" Path="/home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.xpr">
+<Project Version="7" Minor="17" Path="/home/steve/rtl/PWM2/AXI_Interface/modulator_axi/modulator_axi.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="f2c344a00fe540779e2b3035b1e381ec"/>
@@ -30,7 +30,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="zed"/>
     <Option Name="DSANumComputeUnits" Val="16"/>
-    <Option Name="WTXSimLaunchSim" Val="3"/>
+    <Option Name="WTXSimLaunchSim" Val="12"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -65,6 +65,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_1/imports/modulator_source_files/modulator_axi_ip_tb.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../modulator_source_files/modulator_axi_ip_tb.v"/>
@@ -97,29 +98,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="hdl/modulator_axi_ip_v1_0.v"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="src/counter.v"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="drivers/modulator_axi_ip_v1_0/src/Makefile"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="src/modulator_rtl.v"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="sim/modulator_axi_ip_0.v"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="drivers/modulator_axi_ip_v1_0/src/modulator_axi_ip_selftest.c"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="modulator_axi_ip_0_sim_netlist.vhdl"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="src/sine_values.dat"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="synth/modulator_axi_ip_0.v"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="drivers/modulator_axi_ip_v1_0/data/modulator_axi_ip.tcl"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="modulator_axi_ip_0.veo"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="drivers/modulator_axi_ip_v1_0/src/modulator_axi_ip.h"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="drivers/modulator_axi_ip_v1_0/src/modulator_axi_ip.c"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="drivers/modulator_axi_ip_v1_0/data/modulator_axi_ip.mdd"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="hdl/modulator_axi_ip_v1_0_S00_AXI.v"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="modulator_axi_ip_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="modulator_axi_ip_0_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="src/pwm_rtl.v"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="modulator_axi_ip_0_sim_netlist.v"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="modulator_axi_ip_0.vho"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="src/sine_rtl.v"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="modulator_axi_ip_0.xml"/>
-        <CompFileExtendedInfo CompFileName="modulator_axi_ip_0.xci" FileRelPathName="src/frequency_trigger_rtl.v"/>
       </File>
       <Config>
         <Option Name="TopModule" Val="modulator_axi_ip_0"/>
@@ -151,18 +129,14 @@
   <Runs Version="1" Minor="10">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="modulator_axi_ip_0_synth_1" Type="Ft3:Synth" SrcSet="modulator_axi_ip_0" Part="xc7z020clg484-1" ConstrsSet="modulator_axi_ip_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/modulator_axi_ip_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -170,9 +144,7 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -187,9 +159,7 @@
     </Run>
     <Run Id="modulator_axi_ip_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="modulator_axi_ip_0" Description="Default settings for Implementation." SynthRun="modulator_axi_ip_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
