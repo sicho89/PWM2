@@ -2,11 +2,11 @@
 # Webtalk v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Fri Apr  7 16:23:55 2017
-# Process ID: 19723
-# Current directory: /home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.sim/sim_1/behav
-# Command line: wbtcv -mode batch -source /home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.sim/sim_1/behav/xsim.dir/modulator_axi_ip_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: /home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.sim/sim_1/behav/webtalk.log
-# Journal file: /home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.sim/sim_1/behav/webtalk.jou
+# Start of session at: Sat Apr  8 10:59:14 2017
+# Process ID: 13010
+# Current directory: /home/steve/rtl/PWM2/AXI_Interface/modulator_axi/modulator_axi.sim/sim_1/behav
+# Command line: wbtcv -mode batch -source /home/steve/rtl/PWM2/AXI_Interface/modulator_axi/modulator_axi.sim/sim_1/behav/xsim.dir/modulator_axi_ip_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/steve/rtl/PWM2/AXI_Interface/modulator_axi/modulator_axi.sim/sim_1/behav/webtalk.log
+# Journal file: /home/steve/rtl/PWM2/AXI_Interface/modulator_axi/modulator_axi.sim/sim_1/behav/webtalk.jou
 #-----------------------------------------------------------
-source /home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.sim/sim_1/behav/xsim.dir/modulator_axi_ip_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+source /home/steve/rtl/PWM2/AXI_Interface/modulator_axi/modulator_axi.sim/sim_1/behav/xsim.dir/modulator_axi_ip_tb_behav/webtalk/xsim_webtalk.tcl -notrace

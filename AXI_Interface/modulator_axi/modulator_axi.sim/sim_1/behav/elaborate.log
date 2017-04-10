@@ -3,7 +3,7 @@ Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
 Running: /opt/Xilinx/Vivado/2016.4/bin/unwrapped/lnx64.o/xelab -wto f2c344a00fe540779e2b3035b1e381ec --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot modulator_axi_ip_tb_behav xil_defaultlib.modulator_axi_ip_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 2 for port s00_axi_rresp [/home/brian/0404/AXI_Interface/modulator_axi/modulator_axi.srcs/sim_1/imports/modulator_source_files/modulator_axi_ip_tb.v:85]
+WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 2 for port s00_axi_rresp [/home/steve/rtl/PWM2/AXI_Interface/modulator_axi/modulator_axi.srcs/sim_1/imports/modulator_source_files/modulator_axi_ip_tb.v:85]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

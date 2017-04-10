@@ -1,3 +1,7 @@
 *.wdb
 *.btree
 *.gz
+*.wdf
+*.wcfg
+*.log
+*.jou
